@@ -1,0 +1,36 @@
+.card-container {
+    height: 520px;
+    width: 350px;
+    background-color: #009B78;
+    margin-top: 120px;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+}
+
+.triangulo {
+    width: 0;
+    height: 0;
+    border-right: 110px solid transparent;
+    border-top: 120px solid transparent;
+    border-left: 240px solid #E9F1F5;
+    border-bottom: 50px solid #E9F1F5;
+}
+
+.container-login{
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.bienvenido-text{
+    font-size: 28px;
+    margin-bottom: 24px;;
+
+}
+
+.text{
+    color: #ffffff;
+    text-align: start;
+}
+
