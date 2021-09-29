@@ -1,5 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import title from '../../assets/title.svg'
+import Button from '@material-ui/core/Button';
+import { useDispatch } from 'react-redux'
+import { startLogout } from "../../actions/auth";
 
 export const Header = () => {
 
@@ -30,9 +33,13 @@ export const Header = () => {
         display: 'flex',
         alignItems: 'center',
         color: 'white',
-        'justify-content': 'space-between',
+        justifyContent: 'space-between',
         paddingRight: '10px',
         height: '100%',
+    }
+    const dispatch = useDispatch();
+    const cerrarSesion = () => {
+        dispatch( startLogout() );
     }
     return (
         <div  style={style}>
@@ -41,6 +48,8 @@ export const Header = () => {
                       <div style={contentTitleSpread}>
                           <h2></h2>
                         <img alt="img-title" style={{ height: '40px'}} src={title}></img>
+                        <Button style={{backgroundColor: 'red', width: '10%'}} type='button' onClick={ cerrarSesion }>Cerrar Sesión</Button>
+
                       </div>
                 </div>
             </div>

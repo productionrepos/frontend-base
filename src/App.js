@@ -1,15 +1,15 @@
-import './App.css';
-import { Header } from './shared/header/header';
-import { CardLogin } from './login/components/card/CardLogin';
+import RouterComponent from "./router/RouterComponent";
+import {Provider} from "react-redux";
+import { store } from "./store/store";
 
 function App() {
   return (
-    <div className="App">
-      <Header></Header>
-      <div className="content-login">
-        <CardLogin></CardLogin>
-      </div> 
-    </div>
+
+    <>
+        <Provider store={ store }>
+            <RouterComponent />
+        </Provider>
+    </>
   );
 }
 
