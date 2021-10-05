@@ -46,7 +46,7 @@ export const Header = () => {
             <div style={layerOne}>
                 <div style={layerTwo}>
                       <div style={contentTitleSpread}>
-                          <h2></h2>
+                          <h2> </h2>
                         <img alt="img-title" style={{ height: '40px'}} src={title}></img>
                         <Button style={{color:'white',fontFamily:'Nunito' ,width: '10%'}} type='button' onClick={ cerrarSesion }>Cerrar Sesión</Button>
                       </div>

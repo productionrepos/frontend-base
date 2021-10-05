@@ -3,11 +3,11 @@ import './cardlogin.css'
 import '../../../App.css'
 import title from '../../../assets/title.svg'
 //import {Header} from '../../../shared/header/header'
-import { startLogout } from "../../../actions/auth";
+// import { startLogout } from "../../../actions/auth";
 import logo from '../../../assets/title.svg'
 import botonGoogle from '../../../assets/boton-google.svg'
 import {firebase, googleAuthProvider} from '../../../firebase/firebase-config'
-import { useDispatch } from 'react-redux';
+//import { useDispatch } from 'react-redux';
 //import { login } from '../../../actions/auth';
 
 
@@ -125,10 +125,10 @@ export const CardLogin = () => {
         paddingRight: '10px',
         height: '100%',
     }
-    const dispatch = useDispatch();
-    const cerrarSesion = () => {
-        dispatch( startLogout() );
-    }
+    //const dispatch = useDispatch();
+    // function cerrarSesion() {
+    //     dispatch( startLogout() );
+    // }
     return (
         <div  style={style}>
             <div style={layerOne}>

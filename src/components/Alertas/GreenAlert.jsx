@@ -11,7 +11,7 @@ export default function GreenAlert() {
         setOpen(!open)
     }
     return (
-
+        
         <div>
             <Button onClick={handleModal} >Abrir</Button>
             <Modal  show={open} onHide={()=>handleModal}>
