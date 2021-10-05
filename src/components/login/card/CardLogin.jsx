@@ -121,7 +121,7 @@ export const CardLogin = () => {
         display: 'flex',
         alignItems: 'center',
         color: 'white',
-        'justify-content': 'space-between',
+        'justifyContent': 'space-between',
         paddingRight: '10px',
         height: '100%',
     }
