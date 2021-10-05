@@ -8,7 +8,10 @@ import Heading6 from '../TypographyComponents/Heading6'
 export default function TypographyView() {
     return (
         <div>
-            <p>Typography View</p>
+<h3>
+  Heading
+  <small class="text-muted">with muted text</small>
+</h3>            <p>Typography View</p>
             <Heading1></Heading1>
             <Heading2></Heading2>
             <Heading3 color='#EA4335'></Heading3>

@@ -18,7 +18,10 @@ import FormView from '../components/Forms/FormView/FormView';
 import ButtonView from '../components/Buttons/ButtonView/ButtonView';
 import NavBarView from '../components/NavBars/NavBarView/NavBarView';
 import DropDownView from '../components/DropDowns/DropwDownView/DropDownView';
+import AlertView from '../components/Alertas/AlertView/AlertView'
 import TypographyView from '../components/Typography/TypographyView/TypographyView'
+import Tablesview from '../components/Tables/TablesView/Tablesview';
+import Calendarview from '../components/Calendar/Calendarview';
 const RouterComponent = props => {
 
     const dispatch = useDispatch();
@@ -32,11 +35,13 @@ const RouterComponent = props => {
 
         firebase.auth().onAuthStateChanged( (user) => {
 
-            if ( user?.uid ) {
+            if ( user?.uid && user.email.includes('@spread.cl') ) {
                 dispatch( login() );
                 setIsLoggedIn( true );
             } else {
                 setIsLoggedIn( false );
+                
+                console.log('debe ingresar con una cuenta spread')
             }
 
             setchecking(false);
@@ -96,7 +101,22 @@ const RouterComponent = props => {
                             path = '/Navbars'
                             component = { NavBarView }
                             isAuthenticated = { selector }
-                        />               
+                        />  
+                        <PrivateRoute
+                            path = '/Alerts'
+                            component = { AlertView }
+                            isAuthenticated = { selector }
+                        />  
+                        <PrivateRoute
+                            path = '/Tables'
+                            component = { Tablesview }
+                            isAuthenticated = { selector }
+                        />
+                        <PrivateRoute
+                            path = '/Calendar'
+                            component = { Calendarview }
+                            isAuthenticated = { selector }
+                        />       
                     </Switch>
                 </div>
             </Router>

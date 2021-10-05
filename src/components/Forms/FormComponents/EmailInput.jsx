@@ -1,22 +1,31 @@
-import React, {useState} from 'react'
-import {Form,Col,Row} from 'react-bootstrap'
-import './FormTest.css'
+import React,{useState} from 'react'
 
-export default function EmailInput({type,label,placeholder,defaultValue,correctMsg,required_input,incorrectMSg}) {
+import './inputs.css'
+
+export default function EmailInput({required}) {
+    const requerido = false || required
+    const [email, setemail] = useState('')
+    function emailValidation(a){
+        const regex = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i;
+        if(!a || regex.test(a) === false){
+            return false;
+        }
+        return true;
+    }
+
+    function handleChange(event){
+        setemail(event.target.value)
+        //console.log(emailValidation(event.target.value))
+    }
+
     return (
-        <Row className="mb-3">
-            <Form.Group className='form-label' as={Col} md="4" controlId="validationCustom01">
-                <Form.Label>{label || 'email'}</Form.Label>
-                <Form.Control
-                style = {{ background:'#D4D7DA'}}
-                className='form-input'
-                required
-                type="email"
-                placeholder="email@examlpe.com"
-                />
-                <Form.Control.Feedback type="invalid">Debe Igresar un correo valido</Form.Control.Feedback>
-                <Form.Control.Feedback>Email    Correcto</Form.Control.Feedback>
-            </Form.Group>
-        </Row>
+        <div className='container-fluid'>
+                <div className="form-group has-success">
+                    <label className="form-label label-text mt-4">E-mail</label>
+                    <input onChange={handleChange} required={required} type=""  className={ requerido ? (emailValidation(email) ? 'form-control input-field is-valid' : 'form-control input-field is-invalid') : 'form-control input-field is-valid'  }  id="inputValid"/>
+                    <div className="valid-feedback">Correo Valido.</div>
+                    <div className="invalid-feedback">Correo Invalido.</div>
+                </div>
+        </div>
     )
 }

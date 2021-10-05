@@ -1,15 +1,19 @@
 import React from 'react'
 
-export default function Card10({text,title,header,url,url_name}) {
+import './tarjeta.css'
+
+export default function Card10() {
     return (
-        <div className="card-container-ex">
-                <div style = {{background: '#009B78'}} className="card-header-container-ex">
-                    <p style = {{color: '#FFFFFF'}} className="card-header-text">{header || 'Header'}</p>
-                </div>
-                <div style = {{background: '#FFFFFF'}} className="card-body-container">
-                    <p style = {{color: '#272726'}} className="card-title-ex">{title || 'Card10'}</p>
-                    <p style = {{color: '#272726'}}  className="card-text-ex">{text || 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod quia maxime amet qui molestias, veniam vitae incidunt beatae impedit suscipit delectus placeat aspernatur cumque laboriosam earum numquam ut et! Repudiandae.'}</p>
-                    <a style = {{color:'#009B78'}} className = 'card-link' href={url || ''}>{url_name || 'Card Link'}</a>
+        <div className='container-fluid'>
+                <div className="card white-text card-container2  mb-3" style={{background:'#E5E5E5',maxWidth:'20rem'}}>
+                    <div className="card-header header-text" style={{background:'rgba(0, 155, 120, 0.8)', color:'#FFFFFF'}}>Card10</div>
+                    <div className="card-body">
+                        <h4 className="card-title title-text" style={{color:'#272726'}} >Primary card title</h4>
+                        <p className="card-text body-text" style={{color:'#272726'}} >Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                    <div style={{marginLeft:'4.5%',marginBottom:'4%'}}>
+                        <a className='card-link-text' style={{color:'#009B78'}} href="/linkb">Link B</a>
+                    </div>
                 </div>
         </div>
     )

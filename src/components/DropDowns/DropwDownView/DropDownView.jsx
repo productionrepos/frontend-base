@@ -1,22 +1,17 @@
 import React from 'react'
-import DropDown from '../DropDownComponents/DropDown'
-import GreenDropdown from '../DropDownComponents/GreenDropdown'
-import YellowDropdown from '../DropDownComponents/YellowDropdown'
 import BlackDropdown from '../DropDownComponents/BlackDropdown'
+
+import GreenDropdown from '../DropDownComponents/GreenDropdown'
 import RedDropdown from '../DropDownComponents/RedDropdown'
+import YellowDropdown from '../DropDownComponents/YellowDropdown'
+
 export default function DropDownView() {
     return (
         <div>
-            <br />
-            <DropDown text='preuba' actions = {[]}></DropDown>
-            <br />
-            <GreenDropdown></GreenDropdown>
-            <br />
-            <YellowDropdown></YellowDropdown>
-            <br />
-            <BlackDropdown></BlackDropdown>
-            <br />
-            <RedDropdown></RedDropdown>
+            <GreenDropdown/>
+            <YellowDropdown/>
+            <BlackDropdown/>
+            <RedDropdown/>          
         </div>
     )
 }

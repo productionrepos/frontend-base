@@ -1,15 +1,17 @@
 import React from 'react'
 
-export default function Card9({text,title,header,url,url_name}) {
+export default function Card9() {
     return (
-        <div className="card-container-ex">
-                <div style = {{background: '#008063'}} className="card-header-container-ex">
-                    <p style = {{color: '#FFFFFF'}} className="card-header-text">{header || 'Header'}</p>
-                </div>
-                <div style = {{background: '#009B78'}} className="card-body-container">
-                    <p style = {{color: '#FFFFFF'}} className="card-title-ex">{title || 'Card9'}</p>
-                    <p style = {{color: '#FFFFFF'}}  className="card-text-ex">{text || 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod quia maxime amet qui molestias, veniam vitae incidunt beatae impedit suscipit delectus placeat aspernatur cumque laboriosam earum numquam ut et! Repudiandae.'}</p>
-                    <a style = {{color:'#FFFFFF'}} className = 'card-link' href={url || ''}>{url_name || 'Card Link'}</a>
+        <div className='container-fluid'>
+                <div className="card white-text card-container2  mb-3" style={{background:'#009B78',maxWidth:'20rem'}}>
+                    <div className="card-header header-text" style={{background:'#008063', color:'#FFFFFF'}}>Card9</div>
+                    <div className="card-body">
+                        <h4 className="card-title title-text" style={{color:'#FFFFFF'}} >Primary card title</h4>
+                        <p className="card-text body-text" style={{color:'#FFFFFF'}} >Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                    <div style={{marginLeft:'4.5%',marginBottom:'4%'}}>
+                        <a className='card-link-text 'style={{color:'#FFF'}} href="/linka">Link A</a>
+                    </div>
                 </div>
         </div>
     )

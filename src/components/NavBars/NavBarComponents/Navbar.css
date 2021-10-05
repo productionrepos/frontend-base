@@ -1,32 +1,21 @@
+.name{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px !important; 
+    line-height: 44px;
+    letter-spacing: 3px;
+    color: #FFFFFF;
+}
 
-
-#basic-nav-dropdown {
-    color: white; 
+.links{
     font-family: Nunito;
     font-style: normal;
     font-weight: 600;
-    font-size: 24px;
-    line-height: 34px;
+    font-size: 28px ;
+    padding-right: 2%;
+    line-height: 38px;
     letter-spacing: 3px;
-}
 
-
-.navbar-toggler .collapsed{
-    color: white !important;
-}
-
-
-.navbar-toggler-icon {
-    background-image: url("../../../assets//hambuerguer.svg") !important;
-}
-
-.nav-link{
-    font-family: Nunito;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 34px;
-    letter-spacing: 3px;
-    margin-left: 0.5%;
-    color:#fff !important;
+    color: #FFFFFF !important;
 }

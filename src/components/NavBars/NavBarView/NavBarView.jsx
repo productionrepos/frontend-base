@@ -1,32 +1,28 @@
 import React from 'react'
-import WhiteDropdown from '../NavBarComponents/WhiteDropdown'
-import WhiteHamburguer from '../NavBarComponents/WhiteHamburguer'
-import BlackDropdown from '../NavBarComponents/BlackDropdown'
-import BlackHamburgeur from '../NavBarComponents/BlackHamburgeur'
+
+import BlackNavbar from '../NavBarComponents/BlackNavbar'
+import GreenNavbar from '../NavBarComponents/GreenNavbar'
+
 export default function NavBarView() {
-    let lista = [
-        {
-            href:'#casa',
-            ref_text:'Casa'
-        },
-        {
-            href:'#zelda',
-            ref_text:'zelda'
-        },
-        {
-            href:'#about',
-            ref_text:'About'
-        }
-    ]
+    // let lista = [
+    //     {
+    //         href:'#casa',
+    //         ref_text:'Casa'
+    //     },
+    //     {
+    //         href:'#zelda',
+    //         ref_text:'zelda'
+    //     },
+    //     {
+    //         href:'#about',
+    //         ref_text:'About'
+    //     }
+    // ]
     return (
         <div>
-            <WhiteDropdown></WhiteDropdown>
+            <BlackNavbar></BlackNavbar>
             <br />
-            <WhiteHamburguer links = {lista}></WhiteHamburguer>
-            <br />
-            <BlackDropdown></BlackDropdown>
-            <br />
-            <BlackHamburgeur></BlackHamburgeur>
+            <GreenNavbar></GreenNavbar>
         </div>
     )
 }

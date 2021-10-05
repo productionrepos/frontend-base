@@ -1,0 +1,100 @@
+.button-text{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px !important;
+    line-height: 33px !important;
+    letter-spacing: 0.05em !important;
+    padding-left: 3% !important;
+    padding-right: 3% !important;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+
+}
+.button-text2{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px !important;
+    line-height: 33px !important;
+    letter-spacing: 0.05em !important;
+    padding-left: 3% !important;
+    padding-right: 3% !important;
+    
+}
+.button-link-text{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px !important;
+    line-height: 38px !important;
+    letter-spacing: 3px !important;
+    text-decoration-line: underline;
+}
+
+.block-button{
+    border-radius: 5px !important;
+    padding: 5% 10% !important;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px !important;
+    line-height: 38px !important;
+    letter-spacing: 5px !important;
+}
+
+.check-box-button{
+    padding-left: 4% !important;
+    padding-right: 4% !important;
+    font-family: Nunito;
+    font-style: normal !;
+    font-weight: 600 !important;
+    font-size: 18px !important;
+    line-height: 25px !important;
+    letter-spacing: 3px !important;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+}
+.only-button{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px !important;
+    line-height: 25px !important;
+    letter-spacing: 3px !important;
+    padding-left: 2% !important;
+    padding-right: 2% !important;
+    padding-top: 2% !important;
+    padding-bottom: 2% !important;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;  
+}
+.arrow-button-container{
+    display:flex;
+    cursor: pointer;
+    border-radius: 2px;
+}
+.arrow {
+    
+    border-width: 0 3px 3px 0;
+    padding: 3px;
+  }
+  
+  .right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+  
+  .left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+  }
+  
+  .up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+  }
+  
+  .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }

@@ -1,14 +1,16 @@
 import React from 'react'
 
-export default function Card3({text,title,header}) {
+import './tarjeta.css'
+
+export default function Card3() {
     return (
-        <div className="card-container-ex">
-                <div style = {{background: '#F1CD00'}} className="card-header-container-ex">
-                    <p style = {{color: '#243143'}} className="card-header-text">{header || 'Header'}</p>
-                </div>
-                <div style = {{background: '#FDD807'}} className="card-body-container">
-                    <p style = {{color: '#243143'}} className="card-title-ex">{title || 'Card3'}</p>
-                    <p style = {{color: '#243143'}}  className="card-text-ex">{text || 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod quia maxime amet qui molestias, veniam vitae incidunt beatae impedit suscipit delectus placeat aspernatur cumque laboriosam earum numquam ut et! Repudiandae.'}</p>
+        <div className='container-fluid'>
+                <div className="card white-text card-container2  mb-3" style={{background:'#FDD807',maxWidth:'20rem'}}>
+                    <div className="card-header header-text" style={{background:'#F1CD00', color:'#243143'}}>Card3</div>
+                    <div className="card-body">
+                        <h4 className="card-title title-text" style={{color:'#243143'}} >Primary card title</h4>
+                        <p className="card-text body-text" style={{color:'#243143'}} >Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
                 </div>
         </div>
     )

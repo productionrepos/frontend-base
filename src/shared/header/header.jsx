@@ -48,8 +48,7 @@ export const Header = () => {
                       <div style={contentTitleSpread}>
                           <h2></h2>
                         <img alt="img-title" style={{ height: '40px'}} src={title}></img>
-                        <Button style={{backgroundColor: 'red', width: '10%'}} type='button' onClick={ cerrarSesion }>Cerrar Sesión</Button>
-
+                        <Button style={{color:'white',fontFamily:'Nunito' ,width: '10%'}} type='button' onClick={ cerrarSesion }>Cerrar Sesión</Button>
                       </div>
                 </div>
             </div>

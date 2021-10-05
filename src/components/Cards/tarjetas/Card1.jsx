@@ -1,16 +1,17 @@
 import React from 'react'
-import './Card.css'
-export default function Card1({text,header,title}) {
+
+import './tarjeta.css'
+
+export default function Card1() {
     return (
-            <div className="card-container-ex">
-                <div style = {{background: '#008063'}} className="card-header-container-ex">
-                    <p style = {{color: '#FFFFFF'}} className="card-header-text">{header || 'Header'}</p>
+        <div className='container-fluid'>            
+                <div className="card white-text card-container2  mb-3" style={{background:'#009B78',maxWidth:'20rem'}}>
+                    <div className="card-header header-text" style={{background:'#008063', color:'#FFFFFF'}}>Card1</div>
+                    <div className="card-body">
+                        <h4 className="card-title title-text" style={{color:'#FFFFFF'}} >Primary card title</h4>
+                        <p className="card-text body-text" style={{color:'#FFFFFF'}} >Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
                 </div>
-                <div style = {{background: '#009B78'}} className="card-body-container">
-                    <p style = {{color: '#FFFFFF'}} className="card-title-ex">{title || 'Card1'}</p>
-                    <p style = {{color: '#FFFFFF'}}  className="card-text-ex">{text || ' et! Repudiandae.'}</p>
-                </div>
-            </div>         
+            </div>
     )
-    
 }

@@ -1,30 +1,55 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './cardlogin.css'
 import '../../../App.css'
 import title from '../../../assets/title.svg'
-import {Header} from '../../../shared/header/header'
+//import {Header} from '../../../shared/header/header'
 import { startLogout } from "../../../actions/auth";
 import logo from '../../../assets/title.svg'
 import botonGoogle from '../../../assets/boton-google.svg'
 import {firebase, googleAuthProvider} from '../../../firebase/firebase-config'
 import { useDispatch } from 'react-redux';
-import { login } from '../../../actions/auth';
-export const CardLogin = () => {
-    const name_app = 'Hojas de despacho';
-    const dispatch = useDispatch();
+//import { login } from '../../../actions/auth';
 
+
+
+import {Modal,Button} from 'react-bootstrap'
+
+
+
+export const CardLogin = () => {
+    
+
+    const name_app = 'Hojas de despacho';
+    // const dispatch = useDispatch();
     const google = (e) => {
 
         firebase.auth().signInWithPopup( googleAuthProvider )
             .then( ({ user }) => {
-                console.log(user.displayName)
+                // dispatch(login())
 
-                dispatch(login())
+                if(user.email.includes('@spread.cl')){
+                    console.log('valido')
+                    setOpen(false)
+                }
+                else{
+                    console.log('invalido')
+                    setOpen(true)
+                }
             })
     }
+
+
+    //modal
+    const [open,setOpen] = useState(false)
+    
+    function handleModal(){
+        setOpen(!open)
+    }
+
+
     return (
          <div className="App">
-             <Header2></Header2>
+            <Header2></Header2>
             <div className="content-login">
                 <div className="card-container">
                     <div className="container-login">
@@ -46,7 +71,22 @@ export const CardLogin = () => {
                     </div>
                     <div className="triangulo"></div>
                 </div>               
-            </div> 
+            </div>
+
+
+            <Modal  show={open}>
+                <div style={{background:'radial-gradient(70% 70% at 50% 50%, #009B78 0%, #357B6B 100%)'}}>
+                <Modal.Header bsPrefix='modal-header' style={{color:'#FFF'}} > Correo no valido </Modal.Header>
+                <Modal.Body bsPrefix='modal-body' style={{color:'#FFF'}}> Debe ingresar con una cuenta de Spread </Modal.Body>
+                <Modal.Footer bsPrefix='modal-footer' >
+                    <Button variant='modal' onClick={handleModal}>Entiendo</Button>
+                </Modal.Footer>
+                </div>
+            </Modal>  
+
+
+
+
         </div>
 
     )
@@ -94,7 +134,7 @@ export const CardLogin = () => {
             <div style={layerOne}>
                 <div style={layerTwo}>
                       <div style={contentTitleSpread}>
-                          <h2></h2>
+                        <h2> </h2>
                         <img alt="img-title" style={{ height: '40px'}} src={title}></img>
                         {/* <Button style={{backgroundColor: 'red', width: '10%'}} type='button' onClick={ cerrarSesion }>Cerrar Sesión</Button> */}
                         <p></p>
