@@ -6,6 +6,8 @@ import BlackAlert from '../BlackAlert'
 
 export default function AlertView() {
 
+
+    
     return (
         <Container fluid style={{marginTop:'9.5%'}}>
             <GreenAlert/>
