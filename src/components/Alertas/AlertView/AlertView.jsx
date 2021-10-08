@@ -1,13 +1,15 @@
 import React from 'react'
 import GreenAlert from '../GreenAlert'
 
-import YellowAlert from '../YellowAlert'
+import {Container} from 'react-bootstrap'
+import BlackAlert from '../BlackAlert'
 
 export default function AlertView() {
+
     return (
-        <>
-           <YellowAlert/> 
-           <GreenAlert></GreenAlert>
-        </>
+        <Container fluid style={{marginTop:'9.5%'}}>
+            <GreenAlert/>
+            <BlackAlert/>
+        </Container>
     )
 }

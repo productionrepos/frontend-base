@@ -13,7 +13,7 @@
 .item10 { grid-area: 4 / 1 / 5 / 2; }
 
 .grid-container {
-  margin-top: 10%;
+  margin-top: 8.5%;
   grid-gap: 2%;
   display: grid;
   grid-auto-columns: auto;

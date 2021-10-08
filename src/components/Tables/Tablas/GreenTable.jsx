@@ -1,40 +1,163 @@
-import React from 'react'
+import React,{ useMemo } from 'react'
 
-import { Table } from 'react-bootstrap'
+import { useTable, usePagination } from 'react-table'
+import { Container,Button } from 'react-bootstrap'
+import './Table.css'
 
 export default function GreenTable() {
+    let COLUMNS = () =>{
+        return  [
+            {
+                Header:'Nombre',
+                accessor:'nombre'
+            },
+            {
+                Header:'Edad',
+                accessor:'edad'
+            }
+    
+        ]
+    }
+    let DATA = () =>  {
+        return [
+        {
+            'nombre':'Rodrigo',
+            'edad':'25'
+        },
+        {
+            'nombre':'Joaquin',
+            'edad':'24'
+        },
+        {
+            'nombre':'Claudio',
+            'edad':'2123'
+        },
+        {
+            'nombre':'Rodrigo',
+            'edad':'25'
+        },
+        {
+            'nombre':'Joaquin',
+            'edad':'24'
+        },
+        {
+            'nombre':'Claudio',
+            'edad':'2123'
+        },
+        {
+            'nombre':'Rodrigo',
+            'edad':'25'
+        },
+        {
+            'nombre':'Joaquin',
+            'edad':'24'
+        },
+        {
+            'nombre':'Claudio',
+            'edad':'2123'
+        },
+        {
+            'nombre':'Rodrigo',
+            'edad':'25'
+        },
+        {
+            'nombre':'Joaquin',
+            'edad':'24'
+        },
+        {
+            'nombre':'Claudio',
+            'edad':'2123'
+        },{
+            'nombre':'Rodrigo',
+            'edad':'25'
+        },
+        {
+            'nombre':'Joaquin',
+            'edad':'24'
+        },
+        {
+            'nombre':'Claudio',
+            'edad':'2123'
+        }
+        ,{
+            'nombre':'Rodrigo',
+            'edad':'25'
+        },
+        {
+            'nombre':'Joaquin',
+            'edad':'24'
+        },
+        {
+            'nombre':'Claudio',
+            'edad':'2123'
+        }
+    ]}
+    const columns = useMemo( () => COLUMNS(),[])
+    
+    const data = useMemo( () => DATA(),[] )
+    
+    const tablita =  useTable({
+        columns,
+        data
+    },usePagination)
+
+    const {
+        getTableProps,
+        getTableBodyProps,
+        headerGroups,
+        page,
+        nextPage,
+        previousPage,
+        canNextPage,
+        canPreviousPage,
+        pageOptions,
+        state,
+        prepareRow 
+    } = tablita
+
+
+    const {pageIndex} = state  
     return (
-        <div className='container-fluid'>
-            <Table responsive bordered hover style={{fontFamily:'Nunito'}} >
-                <thead style={{background:'#009B78',color:'white'}}>
-                    <tr>
-                    <th>#</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Username</th>
-                    </tr>
+        <Container fluid>
+            <table { ...getTableProps() } >
+                <thead>
+                    {
+                        headerGroups.map((headerGroup) => 
+                            <tr { ... headerGroup.getHeaderGroupProps()}>
+                                {headerGroup.headers.map((column) => 
+                                    <th {...column.getHeaderProps()}>{column.render('Header')}</th>
+                                )}
+                            </tr>
+
+                        )
+                    } 
                 </thead>
-                <tbody >
-                    <tr>
-                    <td>1</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    </tr>
-                    <tr>
-                    <td>2</td>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                    </tr>
-                    <tr>
-                    <td>3</td>
-                    <td>Larry</td>
-                    <td>The Bird</td>
-                    <td>@twitter</td>
-                    </tr>
+                <tbody { ...getTableBodyProps() } >
+                    { page.map(row => {
+                        prepareRow(row)
+                        return  (
+                            <tr {...row.getRowProps()}>
+                                {
+                                    row.cells.map( cell => {
+                                        return <td {...cell.getCellProps}>{cell.render('Cell')}</td>
+                                    })
+                                }
+                            </tr>
+                        )
+                    })}
+
                 </tbody>
-            </Table>
-        </div>
+            </table>
+            <div>
+                <span>
+                    Page{' '}
+                    <strong>
+                        {pageIndex + 1} of {pageOptions.length}
+                    </strong>{' '}
+                </span>
+                <Button style={{background:'#009B78'}} onClick={ () => previousPage() } disabled={!canPreviousPage}>Anterior</Button>
+                <Button style={{background:'#009B78'}} onClick={ () => nextPage() } disabled={!canNextPage }>Siguiente</Button>
+            </div>
+        </Container>
     )
 }

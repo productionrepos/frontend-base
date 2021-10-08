@@ -1,77 +1,149 @@
 import React from 'react'
 import './Home.css'
 import { Header } from '../../shared/header/header'
-import { useHistory } from 'react-router'
 import '../NavBars/NavBarComponents/Navbar.css'
+import CardView from '../Cards/CardView/CardView'
+import AlertView from '../Alertas/AlertView/AlertView'
+import FormView from '../Forms/FormView/FormView'
+import DropdownView from '../DropDowns/DropwDownView/DropDownView'
+import TypographyView from '../Typography/TypographyView/TypographyView'
+import ButtonView from '../Buttons/ButtonView/ButtonView'
+import NavBarView from '../NavBars/NavBarView/NavBarView'
+import TablesView from '../Tables/TablesView/Tablesview'
+import CalendarView from '../Calendar/Calendarview'
+import { Container, Row, Col } from 'react-bootstrap'
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    //Link
+  } from "react-router-dom";
+  import {
+    CDBSidebar,
+    CDBSidebarContent,
+    //CDBSidebarFooter,
+    CDBSidebarHeader,
+    CDBSidebarMenu,
+    CDBSidebarMenuItem,
+  } from 'cdbreact';
+  import { NavLink } from 'react-router-dom';
 export default function Home() {
-    let history = useHistory()
     return (
+        <>
+        <Header></Header>
 
-        <div>
-            <Header></Header>
-
-
+        <Container fluid style={{marginTop:'2%'}}>
             
-            <nav style={{marginTop:'10%', background: 'linear-gradient(180deg, #009B78 0%, #357B6B 100%)'}} className="navbar navbar-expand-lg navbar-dark">
-            <div className="container-fluid">
-            <a className="navbar-brand name" href="/">Componentes</a>
-            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
-            </button>
-
-            <div className="collapse navbar-collapse" id="navbarColor02">
-            <ul className="navbar-nav justify-content-end" style={{width:'100%'}}>
-                    <li className='navl-link links' onClick = {()=>{
-                        history.push({
-                            pathname:'/Cards'
-                        })
-                    }}>Cards</li>
-                    <li className='navl-link links' onClick = {()=>{
-                        history.push({
-                            pathname:'/Forms'
-                        })
-                    }}>Forms</li>
-                    <li className='navl-link links' onClick = {()=>{
-                        history.push({
-                            pathname:'/Dropdowns'
-                        })
-                    }} >Dropdowns</li>
-                    <li className='navl-link links' onClick = {()=>{
-                        history.push({
-                            pathname:'/Typography'
-                        })
-                    }}>Typography</li>
-                    <li className='navl-link links' onClick = {()=>{
-                        history.push({
-                            pathname:'/Buttons'
-                        })
-                    }}>Buttons</li>
-                    <li className='navl-link links' onClick = {()=>{
-                        history.push({
-                            pathname:'Navbars'
-                        })
-                    }} >NavBars</li>
-                    <li className='navl-link links' onClick = {()=>{
-                        history.push({
-                            pathname:'/Alerts'
-                        })
-                    }} >Alerts</li>
-                    <li className='navl-link links' onClick = {()=>{
-                        history.push({
-                            pathname:'/Tables'
-                        })
-                    }} >Tables</li>
-                    <li className='navl-link links' onClick = {()=>{
-                        history.push({
-                            pathname:'/Calendar'
-                        })
-                    }} >Calendar</li>
-                </ul>
-            </div>
-            </div>
-        </nav>
-
-        </div>
+            <Row >
+                <Router>
+                    <Col lg={3} md={3}><Sidebar/></Col>
+                    <Col lg={9} md={9}>
+                        <Switch>
+                            <Route path='/Cards'>
+                                <CardView />
+                            </Route>
+                            <Route path='/Alerts'>
+                                <AlertView />
+                            </Route>
+                            <Route path='/Forms'>
+                                <FormView />
+                            </Route>
+                            <Route path='/Dropdowns'>
+                                <DropdownView />
+                            </Route>
+                            <Route path='/Typography'>
+                                <TypographyView />
+                            </Route>
+                            <Route path='/ButtonView'>
+                                <ButtonView />
+                            </Route>
+                            <Route path='/Navbars'>
+                                <NavBarView />
+                            </Route>
+                            <Route path='/Tables'>
+                                <TablesView />
+                            </Route>
+                            <Route path='/Calendar'>
+                                <CalendarView />
+                            </Route>
+                        </Switch>
+                    </Col>
+                    </Router>
+            </Row>
+        </Container>
+        </>
+        // <>    
+        // <Header></Header>
+        // <Sidebar></Sidebar>
+        // </>
     )
 
+}
+
+const Sidebar = ()  => {
+    return (
+        <div style={{marginTop:'7%',position:'fixed',overflowY:'hidden'}}>
+              <CDBSidebar textColor="#fff" backgroundColor="#009B78">
+                <CDBSidebarHeader style={{borderColor:'#FFF'}} prefix={<i className="fa fa-bars fa-large"></i>}>
+                    <a
+                        href="/"
+                        className="text-decoration-none"
+                        style={{ color: 'inherit' }}
+                    >
+                        Componentes
+                    </a>
+                </CDBSidebarHeader>
+                <CDBSidebarContent  className="sidebar-content">
+                    <CDBSidebarMenu >
+                        <NavLink  exact to="/" activeClassName="activeClicked">
+                        <CDBSidebarMenuItem icon="columns">Home</CDBSidebarMenuItem>
+                        </NavLink>
+                        <NavLink exact to="/Cards" activeClassName="activeClicked">
+                        <CDBSidebarMenuItem icon="table">Cards</CDBSidebarMenuItem>
+                        </NavLink>
+                        <NavLink exact to="/Alerts" activeClassName="activeClicked">
+                        <CDBSidebarMenuItem icon="user">Alerts</CDBSidebarMenuItem>
+                        </NavLink>
+                        <NavLink exact to="/Forms" activeClassName="activeClicked">
+                        <CDBSidebarMenuItem icon="chart-line">
+                            Forms
+                        </CDBSidebarMenuItem>
+                        </NavLink>
+                        <NavLink exact to="/Dropdowns" activeClassName="activeClicked">
+                        <CDBSidebarMenuItem icon="chart-line">
+                            Dropdowns
+                        </CDBSidebarMenuItem>
+                        </NavLink>
+                        <NavLink exact to="/Typography" activeClassName="activeClicked">
+                        <CDBSidebarMenuItem icon="chart-line">
+                            Typography
+                        </CDBSidebarMenuItem>
+                        </NavLink>
+                        <NavLink exact to="/ButtonView" activeClassName="activeClicked">
+                        <CDBSidebarMenuItem icon="chart-line">
+                            Buttons
+                        </CDBSidebarMenuItem>
+                        </NavLink>
+                        <NavLink exact to="/Navbars" activeClassName="activeClicked">
+                        <CDBSidebarMenuItem icon="chart-line">
+                            Navbars
+                        </CDBSidebarMenuItem>
+                        </NavLink>
+                        <NavLink exact to="/Tables" activeClassName="activeClicked">
+                        <CDBSidebarMenuItem icon="chart-line">
+                            Tables
+                        </CDBSidebarMenuItem>
+                        </NavLink>
+                        <NavLink exact to="/Calendar" activeClassName="activeClicked">
+                        <CDBSidebarMenuItem icon="chart-line">
+                            Calendar
+                        </CDBSidebarMenuItem>
+                        </NavLink>                        
+                    </CDBSidebarMenu>
+                </CDBSidebarContent>
+                
+              </CDBSidebar>
+              
+
+        </div>)
 }

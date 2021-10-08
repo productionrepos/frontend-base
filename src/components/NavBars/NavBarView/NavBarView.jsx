@@ -3,6 +3,8 @@ import React from 'react'
 import BlackNavbar from '../NavBarComponents/BlackNavbar'
 import GreenNavbar from '../NavBarComponents/GreenNavbar'
 
+import {Container} from 'react-bootstrap'
+
 export default function NavBarView() {
     // let lista = [
     //     {
@@ -19,10 +21,10 @@ export default function NavBarView() {
     //     }
     // ]
     return (
-        <div>
+        <Container fluid style={{marginTop:'8.5%'}}>
             <BlackNavbar></BlackNavbar>
             <br />
             <GreenNavbar></GreenNavbar>
-        </div>
+        </Container>
     )
 }

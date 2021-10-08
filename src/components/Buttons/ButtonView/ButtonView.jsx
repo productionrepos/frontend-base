@@ -24,27 +24,92 @@ import GreenButton2 from '../ButtonComponents/Buttons/GreenButton2'
 import YellowButton2 from '../ButtonComponents/Buttons/YellowButton2'
 import BlackButton2 from '../ButtonComponents/Buttons/BlackButton2'
 
+import {Container,Row,Col} from 'react-bootstrap'
+
 export default function ButtonView() {
     return (
-        <div>
-            <GreenButton></GreenButton>
-            <WhiteButton></WhiteButton>
-            <YellowButton></YellowButton>
-            <BlackButton></BlackButton>
-            <RedButton></RedButton>
-            <GreenEmptyButton></GreenEmptyButton>
-            <GreyEmptyButton></GreyEmptyButton>
-            <YellowEmptyButton></YellowEmptyButton>
-            <BlackEmptyButton></BlackEmptyButton>
-            <RedEmptyButton></RedEmptyButton>
-            <GreenLinkButton></GreenLinkButton>
-            <GreyLinkButton></GreyLinkButton>
-            <GreenBlockButton></GreenBlockButton>
-            <YellowBlockButton></YellowBlockButton>
-            <CheckBox></CheckBox>
-            <GreenButton2></GreenButton2>
-            <YellowButton2></YellowButton2>
-            <BlackButton2></BlackButton2>
-        </div>
+        <Container fluid style={{marginTop:'9.65%'}}>
+            <Row>
+                <Col  >
+                    <GreenButton/>
+                </Col>
+                <Col>
+                    <WhiteButton/>
+                </Col>
+                <Col>
+                    <YellowButton/>
+                </Col>
+                <Col>
+                    <BlackButton/>
+                </Col>
+
+            </Row>
+            <br />
+            <Row >
+                <Col>
+                    <RedButton/>                
+                </Col>
+                <Col>
+                    <GreenEmptyButton/>
+                </Col>
+                <Col>
+                    <GreyEmptyButton/>
+                </Col>
+                <Col>
+                    <YellowEmptyButton/>
+                </Col>
+
+
+            </Row>
+            <br />
+            <Row>
+                <Col>
+                    <BlackEmptyButton/>    
+                </Col>
+                <Col>
+                    <RedEmptyButton/>
+                </Col>
+                <Col>
+                    <GreenLinkButton/>
+                </Col>
+                <Col>
+                    <GreyLinkButton/>
+                </Col>
+
+            </Row>
+            <br />
+            <Row>
+                <Col>
+                    <GreenButton2/>    
+                </Col>
+                <Col>
+                    <YellowButton2/>
+                </Col>
+                <Col>
+                    <BlackButton2/>
+                </Col>
+    
+            </Row>
+            <br />
+            <Row>
+                <Col>
+                    <CheckBox/>                
+                </Col>
+
+            </Row>
+            <br />
+            <Row>
+                <Col>
+                    <GreenBlockButton/>    
+                </Col>
+            </Row>
+            <br />
+            <Row>
+                <Col>
+                    <YellowBlockButton/>    
+                </Col>
+            </Row>
+
+        </Container>
     )
 }

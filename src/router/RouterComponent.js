@@ -12,16 +12,16 @@ import {login} from "../actions/auth";
 // import Cards from '../login/components/CardView/Cards'
 // import Home from '../login/components/Home/Home';
 import Home from '../components/Home/Home'
-import CardView from '../components/Cards/CardView/CardView'
 import {CardLogin} from '../components/login/card/CardLogin'
-import FormView from '../components/Forms/FormView/FormView';
-import ButtonView from '../components/Buttons/ButtonView/ButtonView';
-import NavBarView from '../components/NavBars/NavBarView/NavBarView';
-import DropDownView from '../components/DropDowns/DropwDownView/DropDownView';
-import AlertView from '../components/Alertas/AlertView/AlertView'
-import TypographyView from '../components/Typography/TypographyView/TypographyView'
-import Tablesview from '../components/Tables/TablesView/Tablesview';
-import Calendarview from '../components/Calendar/Calendarview';
+// import CardView from '../components/Cards/CardView/CardView'
+// import FormView from '../components/Forms/FormView/FormView';
+// import ButtonView from '../components/Buttons/ButtonView/ButtonView';
+// import NavBarView from '../components/NavBars/NavBarView/NavBarView';
+// import DropDownView from '../components/DropDowns/DropwDownView/DropDownView';
+// import AlertView from '../components/Alertas/AlertView/AlertView'
+// import TypographyView from '../components/Typography/TypographyView/TypographyView'
+// import Tablesview from '../components/Tables/TablesView/Tablesview';
+// import Calendarview from '../components/Calendar/Calendarview';
 const RouterComponent = props => {
 
     const dispatch = useDispatch();
@@ -72,51 +72,6 @@ const RouterComponent = props => {
                             component = { Home }
                             isAuthenticated = { selector }
                         />
-                        <PrivateRoute
-                            path = '/Cards'
-                            component = { CardView }
-                            isAuthenticated = { selector }
-                        />
-                        <PrivateRoute
-                            path = '/Forms'
-                            component = { FormView }
-                            isAuthenticated = { selector }
-                        />
-                        <PrivateRoute
-                            path = '/Dropdowns'
-                            component = { DropDownView }
-                            isAuthenticated = { selector }
-                        />         
-                        <PrivateRoute
-                            path = '/Typography'
-                            component = { TypographyView }
-                            isAuthenticated = { selector }
-                        />
-                        <PrivateRoute
-                            path = '/Buttons'
-                            component = { ButtonView }
-                            isAuthenticated = { selector }
-                        />
-                        <PrivateRoute
-                            path = '/Navbars'
-                            component = { NavBarView }
-                            isAuthenticated = { selector }
-                        />  
-                        <PrivateRoute
-                            path = '/Alerts'
-                            component = { AlertView }
-                            isAuthenticated = { selector }
-                        />  
-                        <PrivateRoute
-                            path = '/Tables'
-                            component = { Tablesview }
-                            isAuthenticated = { selector }
-                        />
-                        <PrivateRoute
-                            path = '/Calendar'
-                            component = { Calendarview }
-                            isAuthenticated = { selector }
-                        />       
                     </Switch>
                 </div>
             </Router>
