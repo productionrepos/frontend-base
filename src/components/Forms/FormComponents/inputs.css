@@ -18,3 +18,8 @@
     color: #8B8B8B ;
     background: #D4D7DA ;
 }
+
+.test{
+    background: #FFF !important;
+    border-style: none;
+}

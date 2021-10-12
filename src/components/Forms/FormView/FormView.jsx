@@ -12,10 +12,10 @@ export default function FormView() {
             <form>
             <EmailInput required={true}/>
             <TextInput required={true} input_type='password'/>
-            <TextareaInput/>
-            <div className='container-fluid'>
+            <TextareaInput required={true} valid_msg='Correcto' invalid_msg='Incorrecto'/>
+            <Container fluid style={{marginTop:'2%'}}>
                 <button type="submit" className="btn btn-primary">Submit</button>
-            </div>
+            </Container>
             </form>
         </Container>
     )

@@ -1,20 +1,44 @@
 import React from 'react'
+import {Dropdown, Container} from 'react-bootstrap'
 
 import './DropDown.css'
 
-export default function GreenDropdown() {
+export default function GreenDropdown({label,items}) {
+    if (!items || items.length < 0){
+        items = [
+            {
+                href:'#/action-1',
+                href_label:'Action'
+            },
+            {
+                href:'#/action-2',
+                href_label:'Action2'
+            },
+            {
+                href:'#/action-3',
+                href_label:'Action3'
+            }
+        ]
+    }
     return (
-        <div className='container-fluid'>
-            <div style={{ background:'#009B78', paddingLeft:'2%',paddingRight:'2%', }}  className="btn-group" role="group" aria-label="Button group with nested dropdown">
-                <button type="button" className="btn dropdown-test" style={{color:'white'}} >Primary</button>
-                <div className="btn-group" role="group">
-                    <button style={{color:'white'}} id="btnGroupDrop1" type="button" className="btn dropdown-test dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-                    <div  className="dropdown-menu " aria-labelledby="btnGroupDrop1">
-                    <a className="dropdown-item" href="/ref1">Dropaaaadown link</a>
-                    <a className="dropdown-item" href="/ref2">ased link</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <Container>
+            <Dropdown >
+            <Dropdown.Toggle style={{backgroundColor:'#009B78',color:'#FFF'}} className='dropdown-label'>
+                { label || 'Primary'}
+            </Dropdown.Toggle>
+
+            <Dropdown.Menu>
+                {
+                    items.map( (elemento) => {
+                        return (
+                            <Dropdown.Item key={elemento.href} href={elemento.href}>{elemento.href_label}</Dropdown.Item>
+                        )
+                    })
+                }
+
+            </Dropdown.Menu>
+            </Dropdown>
+        </Container>
+
     )
 }

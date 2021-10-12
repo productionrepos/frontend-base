@@ -21,7 +21,7 @@ export default function EmailInput({required}) {
     return (
         <div className='container-fluid'>
                 <div className="form-group has-success">
-                    <label className="form-label label-text mt-4">E-mail</label>
+                    <label className="form-label mt-4 label-text">E-mail</label>
                     <input onChange={handleChange} required={required} type=""  className={ requerido ? (emailValidation(email) ? 'form-control input-field is-valid' : 'form-control input-field is-invalid') : 'form-control input-field is-valid'  }  id="inputValid"/>
                     <div className="valid-feedback">Correo Valido.</div>
                     <div className="invalid-feedback">Correo Invalido.</div>

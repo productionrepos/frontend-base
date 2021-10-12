@@ -27,7 +27,8 @@ import {
     CDBSidebarMenuItem,
   } from 'cdbreact';
   import { NavLink } from 'react-router-dom';
-export default function Home() {
+
+  export default function Home() {
     return (
         <>
         <Header></Header>
@@ -95,47 +96,44 @@ const Sidebar = ()  => {
                 </CDBSidebarHeader>
                 <CDBSidebarContent  className="sidebar-content">
                     <CDBSidebarMenu >
-                        <NavLink  exact to="/" activeClassName="activeClicked">
-                        <CDBSidebarMenuItem icon="columns">Home</CDBSidebarMenuItem>
-                        </NavLink>
                         <NavLink exact to="/Cards" activeClassName="activeClicked">
-                        <CDBSidebarMenuItem icon="table">Cards</CDBSidebarMenuItem>
+                        <CDBSidebarMenuItem icon='id-card'>Cards</CDBSidebarMenuItem>
                         </NavLink>
                         <NavLink exact to="/Alerts" activeClassName="activeClicked">
-                        <CDBSidebarMenuItem icon="user">Alerts</CDBSidebarMenuItem>
+                        <CDBSidebarMenuItem icon="exclamation-triangle">Alerts</CDBSidebarMenuItem>
                         </NavLink>
                         <NavLink exact to="/Forms" activeClassName="activeClicked">
-                        <CDBSidebarMenuItem icon="chart-line">
+                        <CDBSidebarMenuItem icon="keyboard">
                             Forms
                         </CDBSidebarMenuItem>
                         </NavLink>
                         <NavLink exact to="/Dropdowns" activeClassName="activeClicked">
-                        <CDBSidebarMenuItem icon="chart-line">
+                        <CDBSidebarMenuItem icon="caret-down">
                             Dropdowns
                         </CDBSidebarMenuItem>
                         </NavLink>
                         <NavLink exact to="/Typography" activeClassName="activeClicked">
-                        <CDBSidebarMenuItem icon="chart-line">
+                        <CDBSidebarMenuItem icon="heading">
                             Typography
                         </CDBSidebarMenuItem>
                         </NavLink>
                         <NavLink exact to="/ButtonView" activeClassName="activeClicked">
-                        <CDBSidebarMenuItem icon="chart-line">
+                        <CDBSidebarMenuItem icon="stop">
                             Buttons
                         </CDBSidebarMenuItem>
                         </NavLink>
                         <NavLink exact to="/Navbars" activeClassName="activeClicked">
-                        <CDBSidebarMenuItem icon="chart-line">
+                        <CDBSidebarMenuItem icon="bars">
                             Navbars
                         </CDBSidebarMenuItem>
                         </NavLink>
                         <NavLink exact to="/Tables" activeClassName="activeClicked">
-                        <CDBSidebarMenuItem icon="chart-line">
+                        <CDBSidebarMenuItem icon="table">
                             Tables
                         </CDBSidebarMenuItem>
                         </NavLink>
                         <NavLink exact to="/Calendar" activeClassName="activeClicked">
-                        <CDBSidebarMenuItem icon="chart-line">
+                        <CDBSidebarMenuItem icon="calendar-alt">
                             Calendar
                         </CDBSidebarMenuItem>
                         </NavLink>                        

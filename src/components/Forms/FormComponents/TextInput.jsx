@@ -18,7 +18,7 @@ export default function TextInput({label, required, input_type}) {
         setText(event.target.value)
         console.log(event.target.value.length)
     }
-    console.log(requerido,inputValidation(text))
+    //console.log(requerido,inputValidation(text))
 
     return (
         <div className='container-fluid'>

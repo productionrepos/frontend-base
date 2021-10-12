@@ -5,6 +5,7 @@ import { Container,Button } from 'react-bootstrap'
 import './Table.css'
 
 export default function GreenTable() {
+    let i = 0
     let COLUMNS = () =>{
         return  [
             {
@@ -122,10 +123,10 @@ export default function GreenTable() {
             <table { ...getTableProps() } >
                 <thead>
                     {
-                        headerGroups.map((headerGroup) => 
-                            <tr { ... headerGroup.getHeaderGroupProps()}>
+                        headerGroups.map((headerGroup)  => 
+                            <tr  { ... headerGroup.getHeaderGroupProps()}>
                                 {headerGroup.headers.map((column) => 
-                                    <th {...column.getHeaderProps()}>{column.render('Header')}</th>
+                                    <th key={i++} {...column.getHeaderProps()}>{column.render('Header')}</th>
                                 )}
                             </tr>
 

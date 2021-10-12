@@ -27,8 +27,35 @@ import BlackButton2 from '../ButtonComponents/Buttons/BlackButton2'
 import {Container,Row,Col} from 'react-bootstrap'
 
 export default function ButtonView() {
+    const clickeado1 = () => {
+        console.log('clikeado 1')
+    }
+    const clickeado2 = () =>{
+        console.log('clikeado 2')
+    }
+    const clickeado3 = () =>{
+        console.log('clikeado 3')
+    }
+    let lista = [
+        {
+            onClick:clickeado1,
+            text:'CheckBox11',
+            id:1
+        },
+        {
+            onClick:clickeado2,
+            text:'CheckBox22',
+            id:2
+        },
+        {
+            onClick:clickeado3,
+            text:'CheckBox33',
+            id:3
+        }
+    ]
+
     return (
-        <Container fluid style={{marginTop:'9.65%'}}>
+        <Container fluid style={{marginTop:'9.65%',marginBottom:'5%'}}>
             <Row>
                 <Col  >
                     <GreenButton/>
@@ -93,7 +120,7 @@ export default function ButtonView() {
             <br />
             <Row>
                 <Col>
-                    <CheckBox/>                
+                    <CheckBox inputs = {lista}/>                
                 </Col>
 
             </Row>
