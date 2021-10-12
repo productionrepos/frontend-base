@@ -13,6 +13,8 @@ import MutedHeading4 from '../TypographyComponents/MutedHeading4'
 import MutedHeading5 from '../TypographyComponents/MutedHeading5'
 import MutedHeading6 from '../TypographyComponents/MutedHeading6'
 
+import Emphasis from '../TypographyComponents/Emphasis'
+import Quoteblock from '../TypographyComponents/Quoteblock'
 
 import { Container, Row, Col } from 'react-bootstrap'
 
@@ -35,6 +37,22 @@ export default function TypographyView() {
                     <MutedHeading4/>
                     <MutedHeading5/>
                     <MutedHeading6/>
+                </Col>
+            </Row>
+            <br />
+            <Row>
+                <Col>
+                    <h2>Emphasis classes</h2>
+                    <Emphasis/>
+                    <Emphasis color="text-secondary" text="Pellentesque ornare sem lacinia quam venenatis vestibulum."/>
+                    <Emphasis color="text-warning" text="Etiam porta sem malesuada magna mollis euismod."/>
+                    <Emphasis color="text-danger" text="Donec ullamcorper nulla non metus auctor fringilla."/>
+                    <Emphasis color="text-success" text ="Duis mollis, est non commodo luctus, nisi erat porttitor ligula."/>
+                    <Emphasis color="text-info" text="Maecenas sed diam eget risus varius blandit sit amet non magna."/>
+                </Col>
+                <Col>
+                    <h2>Blockquotes</h2>
+                    <Quoteblock/>
                 </Col>
             </Row>
         </Container>
