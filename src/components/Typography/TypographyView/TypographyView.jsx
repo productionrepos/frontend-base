@@ -26,7 +26,7 @@ export default function TypographyView() {
                     <Heading3 color='#EA4335'/>
                     <Heading4 color='#979797'/>
                     <Heading5 color='#FDD807'/>
-                    <Heading6 color='#009B78' text='texto y color en props'/>
+                    <Heading6 color='#009B78' text='texto asd y color en props'/>
                 </Col>
                 <Col>
                     <MutedHeading1 color='#EA4335' text='texto y color por props' mutedText=' con texto muted por props'/>

@@ -15,7 +15,7 @@ export default function AlertView() {
                     <GreenAlert/>
                 </Col>
                 <Col>
-                    <BlackAlert header='titulo' body='mensaje de prueba' label='prueba'/>
+                    <BlackAlert header='titul o' body='mensaje de prueba' label='prueba'/>
                 </Col>
             </Row>
         </Container>
