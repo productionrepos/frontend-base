@@ -140,7 +140,7 @@ export default function GreenTable() {
                             <tr {...row.getRowProps()}>
                                 {
                                     row.cells.map( cell => {
-                                        return <td {...cell.getCellProps}>{cell.render('Cell')}</td>
+                                        return <td key={i++} {...cell.getCellProps}>{cell.render('Cell')}</td>
                                     })
                                 }
                             </tr>

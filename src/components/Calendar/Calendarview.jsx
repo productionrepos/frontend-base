@@ -6,10 +6,10 @@ import {Container, Col, Row} from 'react-bootstrap'
 import MutedHeading1 from '../Typography/TypographyComponents/MutedHeading1'
 export default function Calendarview() {
     const [rango, setRango] = useState(new Date())
-    console.log('rango')    
-    for(let i = 0; i < rango.length; i++){
-        console.log(rango[i].toDateString())
-    }
+    // console.log('rango')    
+    // for(let i = 0; i < rango.length; i++){
+    //     console.log(rango[i].toDateString())
+    // }
 
     return (
         <Container fluid style={{marginTop:'9.65%'}}>
