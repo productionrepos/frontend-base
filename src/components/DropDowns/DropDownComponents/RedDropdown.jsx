@@ -1,6 +1,9 @@
 import React from 'react'
 
-import './DropDown.css'
+import './Dropdown.css'
+
+import {Dropdown, Container} from 'react-bootstrap'
+
 
 export default function RedDropdown({items,label}) {
     if (!items || items.length < 0){
@@ -20,24 +23,23 @@ export default function RedDropdown({items,label}) {
         ]
     }
     return (
-        <div className='container-fluid'> 
-            <div style={{ background:'#EA4335', paddingLeft:'2%',paddingRight:'2%', }}  className="btn-group" role="group" aria-label="Button group with nested dropdown">
-                <button type="button" className="btn dropdown-test" style={{color:'#FFFFFF'}} >{ label || 'Danger'}</button>
-                <div className="btn-group" role="group">
-                    <button style={{color:'#FFFFFF'}} id="btnGroupDrop1" type="button" className="btn dropdown-test dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+        <Container style={{width:'50%'}}>
+            <Dropdown >
+            <Dropdown.Toggle style={{width:'100%',backgroundColor:'#EA4335',color:'#FFF'}} className='dropdown-label'>
+                { label || 'Danger'}
+            </Dropdown.Toggle>
 
-                    <div  className="dropdown-menu " aria-labelledby="btnGroupDrop1">
-                    {
-                        items.map((element) => {
-                            return (
-                                <a key={element.href} className="dropdown-item" href={element.href}>{element.href_label}</a>
-                            )
-                        })  
-                    }
+            <Dropdown.Menu style={{width:'100%', backgroundColor:'rgba(234, 67, 53, 0.7)'}}>
+                {
+                    items.map( (elemento) => {
+                        return (
+                            <Dropdown.Item id="red-d-item" key={elemento.href} href={elemento.href}>{elemento.href_label}</Dropdown.Item>
+                        )
+                    })
+                }
 
-                    </div>
-                </div>
-            </div>
-        </div>
+            </Dropdown.Menu>
+            </Dropdown>
+        </Container>
     )
 }

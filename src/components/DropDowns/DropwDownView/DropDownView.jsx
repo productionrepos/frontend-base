@@ -21,8 +21,7 @@ export default function DropDownView() {
                     <YellowDropdown/>
                 </Col>
             </Row>
-            <br/>
-            <Row>
+            <Row style={{marginTop:'20%'}}>
                 <Col>
                     <BlackDropdown/>
                 </Col>

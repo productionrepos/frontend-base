@@ -149,7 +149,7 @@ export default function GreenTable() {
 
                 </tbody>
             </table>
-            <div>
+            <div style={{float:'right'}}>
                 <span>
                     Page{' '}
                     <strong>

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './DropDown.css'
+import './Dropdown.css'
 
 import {Dropdown, Container} from 'react-bootstrap'
 
@@ -23,17 +23,17 @@ export default function YellowDropdown({label,items}) {
         ]
     }
     return (
-        <Container>
+        <Container style={{width:'50%'}}> 
             <Dropdown >
-            <Dropdown.Toggle style={{backgroundColor:'#FDD807',color:'#2C2C2C'}} className='dropdown-label'>
+            <Dropdown.Toggle style={{width:'100%',backgroundColor:'#FDD807',color:'#2C2C2C'}} className='dropdown-label'>
                 { label || 'Secondary'}
             </Dropdown.Toggle>
 
-            <Dropdown.Menu>
+            <Dropdown.Menu style={{width:'100%',backgroundColor:'rgba(253, 216, 7, 0.5)'}}>
                 {
                     items.map( (elemento) => {
                         return (
-                            <Dropdown.Item key={elemento.href} href={elemento.href}>{elemento.href_label}</Dropdown.Item>
+                            <Dropdown.Item id="yellow-d-item" key={elemento.href} href={elemento.href}>{elemento.href_label}</Dropdown.Item>
                         )
                     })
                 }

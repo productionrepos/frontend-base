@@ -72,6 +72,51 @@ const RouterComponent = props => {
                             component = { Home }
                             isAuthenticated = { selector }
                         />
+                        <PrivateRoute
+                            path = "/Cards"
+                            component = { Home }
+                            isAuthenticated = { selector }
+                        />
+                        <PrivateRoute
+                            path = "/Alerts"
+                            component = { Home }
+                            isAuthenticated = { selector }
+                        />
+                        <PrivateRoute
+                            path = "/Forms"
+                            component = { Home }
+                            isAuthenticated = { selector }
+                        />
+                        <PrivateRoute
+                            path = "/Dropdowns"
+                            component = { Home }
+                            isAuthenticated = { selector }
+                        />
+                        <PrivateRoute
+                            path = "/Typography"
+                            component = { Home }
+                            isAuthenticated = { selector }
+                        />
+                        <PrivateRoute
+                            path = "/ButtonView"
+                            component = { Home }
+                            isAuthenticated = { selector }
+                        />
+                        <PrivateRoute
+                            path = "/Navbars"
+                            component = { Home }
+                            isAuthenticated = { selector }
+                        />
+                        <PrivateRoute
+                            path = "/Tables"
+                            component = { Home }
+                            isAuthenticated = { selector }
+                        />
+                        <PrivateRoute
+                            path = "/Calendar"
+                            component = { Home }
+                            isAuthenticated = { selector }
+                        />
                     </Switch>
                 </div>
             </Router>

@@ -1,0 +1,81 @@
+
+
+.dropdown-test{
+    font-family: Nunito !important;
+    font-style: normal;
+    font-weight: 600 !important;
+    font-size: 24px !important;
+    line-height: 33px !important;
+    letter-spacing: 0.03em !important;
+}
+
+.dropdown-toggle::after{
+    margin-left: 80px !important;
+}
+
+.dropdown-label{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 600 !important;
+    font-size: 24px !important;
+    line-height: 33px !important;
+    letter-spacing: 0.03em !important;
+}
+
+#green-d-item{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 27px;
+    letter-spacing: 0.05em;
+    color:#FFF;
+}
+
+#green-d-item:hover{
+    background-color: #009B78 !important;
+}
+
+
+#red-d-item{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 27px;
+    letter-spacing: 0.05em;
+    color:#FFF
+}
+
+#red-d-item:hover{
+    background-color: #EA4335;
+}
+
+
+#yellow-d-item{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 27px;
+    letter-spacing: 0.05em;
+    color:#272726
+}
+
+#yellow-d-item:hover{
+    background-color: #FDD807;
+}
+
+#black-d-item{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 27px;
+    letter-spacing: 0.05em;
+    color:#FFFFFF
+}
+
+#black-d-item:hover{
+    background-color: #272726;
+}

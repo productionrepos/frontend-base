@@ -85,14 +85,8 @@ const Sidebar = ()  => {
     return (
         <div style={{marginTop:'7%',position:'fixed',overflowY:'hidden'}}>
               <CDBSidebar textColor="#fff" backgroundColor="#009B78">
-                <CDBSidebarHeader style={{borderColor:'#FFF'}} prefix={<i className="fa fa-bars fa-large"></i>}>
-                    <a
-                        href="/"
-                        className="text-decoration-none"
-                        style={{ color: 'inherit' }}
-                    >
+                <CDBSidebarHeader style={{borderColor:'#FFF'}} prefix={<i className="fa  fa-large"></i>}>
                         Componentes
-                    </a>
                 </CDBSidebarHeader>
                 <CDBSidebarContent  className="sidebar-content">
                     <CDBSidebarMenu >
