@@ -15,7 +15,7 @@ export default function BlackAlert({header,body,label}) {
         
         <div>
             <BlackButton onClickProp={handleModal} text='Clickeame'/>
-            <Modal  show={open} onHide={()=>handleModal}>
+            <Modal show={open} onHide={()=>handleModal}>
                 <div style={{background:'radial-gradient(70% 70% at 50% 50%, #2C2C2C 0%, #2D403B 100%)'}}>
                 <Modal.Header bsPrefix='modal-header' style={{color:'#FFF'}} > { header || 'Correo no valido'} </Modal.Header>
                 <Modal.Body bsPrefix='modal-body' style={{color:'#FFF'}}> { body ||  'Debe ingresar con una cuenta de Spread'} </Modal.Body>

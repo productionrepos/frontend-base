@@ -19,8 +19,8 @@ import {Modal,Button} from 'react-bootstrap'
 export const CardLogin = () => {
     
 
-    const name_app = 'Hojas de despacho';
-    // const dispatch = useDispatch();
+    const name_app = 'Aplicación Genérica';
+    // const dispatch = useDispatch();asdasd
     const google = (e) => {
 
         firebase.auth().signInWithPopup( googleAuthProvider )
