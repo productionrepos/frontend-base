@@ -79,3 +79,14 @@
 #black-d-item:hover{
     background-color: #272726;
 }
+.show > .btn-primary.dropdown-toggle:focus{
+    box-shadow: none !important;
+}
+
+btn-check:focus + .btn-primary, .btn-primary:focus{
+    border-color: transparent !important;
+    box-shadow: none !important;
+}
+.btn-primary{
+    border-style: none !important;
+}

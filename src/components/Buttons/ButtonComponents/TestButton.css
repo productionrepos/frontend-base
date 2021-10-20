@@ -1,7 +1,7 @@
 .button-text{
     font-family: Nunito;
     font-style: normal;
-    font-weight: 800 !important;
+    font-weight: 600 !important;
     font-size: 24px !important;
     line-height: 33px !important;
     letter-spacing: 0.05em !important;
@@ -14,7 +14,7 @@
 .button-text2{
     font-family: Nunito;
     font-style: normal;
-    font-weight: 800 !important;
+    font-weight: 600 !important;
     font-size: 24px !important;
     line-height: 33px !important;
     letter-spacing: 0.05em !important;
@@ -25,7 +25,7 @@
 .button-link-text{
     font-family: Nunito;
     font-style: normal;
-    font-weight: 800 !important;
+    font-weight: 600 !important;
     font-size: 28px !important;
     line-height: 38px !important;
     letter-spacing: 3px !important;
@@ -37,7 +37,7 @@
     padding: 5% 10% !important;
     font-family: Nunito;
     font-style: normal;
-    font-weight: 800 !important;
+    font-weight: 600 !important;
     font-size: 28px !important;
     line-height: 38px !important;
     letter-spacing: 5px !important;
@@ -50,7 +50,7 @@
     padding-right: 4% !important;
     font-family: Nunito;
     font-style: normal !;
-    font-weight: 800 !important;
+    font-weight: 600 !important;
     font-size: 18px !important;
     line-height: 25px !important;
     letter-spacing: 3px !important;
@@ -58,7 +58,7 @@
 .only-button{
     font-family: Nunito;
     font-style: normal;
-    font-weight: 800 !important;
+    font-weight: 600 !important;
     font-size: 18px !important;
     line-height: 25px !important;
     letter-spacing: 3px !important;

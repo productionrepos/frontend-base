@@ -1,7 +1,7 @@
 .name{
     font-family: Nunito;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 600 !important;
     font-size: 32px !important; 
     line-height: 44px;
     letter-spacing: 3px;
@@ -11,7 +11,7 @@
 .links{
     font-family: Nunito;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 600 !important;
     font-size: 28px ;
     padding-right: 2%;
     line-height: 38px;
@@ -19,3 +19,49 @@
 
     color: #FFFFFF !important;
 }
+
+.green-dropdown-menu{
+    width: 100%;
+    background: linear-gradient(180deg, #009B78 0%, #357B6B 100%);
+}
+
+.green-dropdown-item{
+    color:#FFF !important; 
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 600 !important; 
+    font-size: 20px;
+    line-height: 27px;
+    
+    /* identical to box height */
+    letter-spacing: 0.05em;
+}
+
+.green-dropdown-item:hover{
+    background: #357B6B  !important;
+}
+
+
+
+
+.black-dropdown-menu{
+    width: 100%;
+    background: linear-gradient(180deg, #2C2C2C 0%, #2D403B 100%);
+}
+
+.black-dropdown-item{
+    color:#FFF !important; 
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 600 !important; 
+    font-size: 20px;
+    line-height: 27px;
+    
+    /* identical to box height */
+    letter-spacing: 0.05em;
+}
+
+.black-dropdown-item:hover{
+    background: #2D403B  !important;
+}
+

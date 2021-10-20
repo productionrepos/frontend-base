@@ -5,19 +5,24 @@
     font-size: 24px;
     line-height: 33px;
     letter-spacing: 0.05em;
-    border-color: #272726 !important;
+    /* border-color: #272726 !important;
+     */
 }
 
 .modal-body{
-    font-family: Nunito;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 28px;
-    line-height: 38px;
-    letter-spacing: 0.03em;
+    
+font-family: Nunito;
+font-style: normal;
+font-weight: normal;
+font-size: 28px;
+line-height: 38px;
+
+/* or 136% */
+text-align: center;
+letter-spacing: 0.05em;
 }
 .modal-footer{
-    border-color: #272726 !important;
+    border-color: #FFF !important;
     
 }
 
@@ -25,5 +30,15 @@
     background:'transparent' !important;
     border-style:'none' !important;
     color:white !important;
-    border-color: #357B6B !important;
+    /* border-color: #357B6B !important; */
+}
+
+body.modal-open > :not(.modal) {
+    display: flex;
+    flex-direction: column;
+    -webkit-filter: blur(4px);
+    -moz-filter: blur(4px);
+    -o-filter: blur(4px);
+    -ms-filter: blur(4px);
+    filter: blur(4px);
 }

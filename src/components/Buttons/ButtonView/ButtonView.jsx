@@ -39,18 +39,21 @@ export default function ButtonView() {
     let lista = [
         {
             onClick:clickeado1,
-            text:'CheckBox11',
-            id:1
+            text:'CheckBoxA',
+            id:1,
+            background: '#009B78'
         },
         {
             onClick:clickeado2,
-            text:'CheckBox22',
-            id:2
+            text:'CheckBoxB',
+            id:2,
+            background:'rgba(0, 155, 120, 0.93)'
         },
         {
             onClick:clickeado3,
-            text:'CheckBox33',
-            id:3
+            text:'CheckBoxC',
+            id:3,
+            background:'rgba(0, 155, 120, 0.86)'
         }
     ]
 

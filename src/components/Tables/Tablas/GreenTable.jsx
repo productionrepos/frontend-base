@@ -149,14 +149,14 @@ export default function GreenTable() {
 
                 </tbody>
             </table>
-            <div style={{float:'right'}}>
+            <div style={{float:'right',margin:'20px'}}>
                 <span>
                     Page{' '}
                     <strong>
                         {pageIndex + 1} of {pageOptions.length}
                     </strong>{' '}
                 </span>
-                <Button style={{background:'#009B78'}} onClick={ () => previousPage() } disabled={!canPreviousPage}>Anterior</Button>
+                <Button style={{background:'#009B78',marginRight:'20px'}} onClick={ () => previousPage() } disabled={!canPreviousPage}>Anterior</Button>
                 <Button style={{background:'#009B78'}} onClick={ () => nextPage() } disabled={!canNextPage }>Siguiente</Button>
             </div>
         </Container>

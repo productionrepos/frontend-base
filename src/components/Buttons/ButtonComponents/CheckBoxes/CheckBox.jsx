@@ -30,7 +30,7 @@ export default function CheckBox({ inputs }) {
                                 return (
                                     <div key={element.id} style={{margin:'1%'}}>
                                         <input  onClick={element.onClick} type="checkbox" className="btn-check " id={'btncheck'+element.id}  autoComplete="off"/>
-                                        <label  style={{background:'#009B78',color:'#FFF',padding:'20%'}} className="btn check-box-button " htmlFor={'btncheck'+element.id}>{element.text}</label>
+                                        <label  style={{background:element.background,color:'#FFF',padding:'20%'}} className="btn check-box-button " htmlFor={'btncheck'+element.id}>{element.text}</label>
                                     </div>
                                 )             
                     } )

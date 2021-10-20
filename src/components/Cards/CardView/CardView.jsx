@@ -104,7 +104,9 @@ export default function Cards() {
     }
     const card_container_style7 = {
         border: '3px solid #FDD807',
-        maxWidth: '20rem'
+        maxWidth: '20rem',
+        boxShadow: '4px 4px 24px rgba(0, 0, 0, 0.1)',
+        borderRadius: '5px' 
     }
 
     const body_style8 = {
@@ -117,7 +119,9 @@ export default function Cards() {
     }
     const card_container_style8 = {
         border: '3px solid #EA4335',
-        maxWidth: '20rem'
+        maxWidth: '20rem',
+        boxShadow: '4px 4px 24px rgba(0, 0, 0, 0.1)',
+        borderRadius: '5px' 
     }
 
     const body_style9 = {
@@ -149,9 +153,8 @@ export default function Cards() {
     const card_link_style10 = {
         color:'#009B78'
     }
-
-
     const body_text = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa a voluptas nesciunt eos optio, minus, similique magnam quia laudantium ipsa'
+
     return (
         <Container style={{marginTop:'9.65%'}}>
             <Row>
