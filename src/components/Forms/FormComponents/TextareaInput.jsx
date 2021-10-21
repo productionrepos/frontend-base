@@ -22,7 +22,15 @@ export default function TextareaInput({label, required, valid_msg, invalid_msg})
     return (
         <div className='container-fluid'>
             <label htmlFor="exampleTextarea" className="form-label mt-4 label-text">{ label || 'Example textarea'}</label>
-            <textarea  onChange={handleChange} required={requerido} id="exampleTextarea" rows="3" className={ requerido ?   (inputValidation(text) ? 'form-control is-valid' : 'form-control is-invalid') : 'form-control test is-valid' }></textarea>
+            <textarea  onChange={handleChange} required={requerido} id="exampleTextarea" rows="3" 
+            className = 
+            { 
+                requerido ?   
+                    ( !inputValidation(text) ? 'form-control input-field ' : inputValidation(text) ? 'form-control input-field is-valid' : 'form-control input-field is-invalid')
+                    : !inputValidation(text) ? 'form-control input-field' : 'form-control input-field is-valid'
+            } 
+            >
+            </textarea>
             { requerido && <div className="valid-feedback">{ valid_msg || 'Valido'}</div> }
             { requerido && <div className="invalid-feedback">{ invalid_msg ||  'Invalido'}</div> }
         </div>

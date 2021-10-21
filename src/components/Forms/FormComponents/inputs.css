@@ -16,7 +16,7 @@
     line-height: 19px ;
     letter-spacing: 0.05em;
     color: #8B8B8B ;
-    background: #D4D7DA ;
+    background-color: #D4D7DA !important ;
 }
 
 .test{
