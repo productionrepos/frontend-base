@@ -22,7 +22,7 @@ export default function TypographyView() {
     return (
         <Container fluid style={{marginTop:'9.65%'}}>
             <Row>
-                <Col>
+                <Col style={{textAlign:'center'}}>
                     <Heading1/>
                     <Heading2/>
                     <Heading3 color='#EA4335'/>
@@ -30,7 +30,7 @@ export default function TypographyView() {
                     <Heading5 color='#FDD807'/>
                     <Heading6 color='#009B78' text='texto asd y color en props'/>
                 </Col>
-                <Col>
+                <Col style={{textAlign:'center'}}>
                     <MutedHeading1 color='#EA4335' text='texto y color por props' mutedText=' con texto muted por props'/>
                     <MutedHeading2/>
                     <MutedHeading3/>
@@ -41,7 +41,7 @@ export default function TypographyView() {
             </Row>
             <br />
             <Row>
-                <Col>
+                <Col style={{textAlign:'center'}}>
                     <h2>Emphasis classes</h2>
                     <Emphasis/>
                     <Emphasis color="text-secondary" text="Pellentesque ornare sem lacinia quam venenatis vestibulum."/>
@@ -50,7 +50,7 @@ export default function TypographyView() {
                     <Emphasis color="text-success" text ="Duis mollis, est non commodo luctus, nisi erat porttitor ligula."/>
                     <Emphasis color="text-info" text="Maecenas sed diam eget risus varius blandit sit amet non magna."/>
                 </Col>
-                <Col>
+                <Col style={{paddingLeft:'8%'}}>
                     <h2>Blockquotes</h2>
                     <Quoteblock/>
                 </Col>

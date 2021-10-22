@@ -8,7 +8,7 @@ import Heading1 from '../Typography/TypographyComponents/Heading1'
 export default function Calendarview() {
     const [rango, setRango] = useState(new Date())
     return (
-        <Container fluid style={{marginTop:'9.65%',marginLeft:'20%'}}>
+        <Container fluid style={{marginTop:'9.65%',paddingLeft:'35%'}}>
             <Row>
                 <Col>
                     <Heading1 text='Seleccione un Rango de Fechas'  />

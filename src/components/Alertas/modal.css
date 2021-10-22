@@ -22,7 +22,7 @@ text-align: center;
 letter-spacing: 0.05em;
 }
 .modal-footer{
-    border-color: #FFF !important;
+    border-color: transparent !important;
     
 }
 

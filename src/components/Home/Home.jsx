@@ -18,124 +18,120 @@ import {
     Route,
     //Link
   } from "react-router-dom";
-  import {
-    CDBSidebar,
-    CDBSidebarContent,
-    //CDBSidebarFooter,
-    CDBSidebarHeader,
-    CDBSidebarMenu,
-    CDBSidebarMenuItem,
-  } from 'cdbreact';
-  import { NavLink } from 'react-router-dom';
+//   import {
+//     CDBSidebar,
+//     CDBSidebarContent,
+//     //CDBSidebarFooter,
+//     CDBSidebarHeader,
+//     CDBSidebarMenu,
+//     CDBSidebarMenuItem,
+//   } from 'cdbreact';
+//   import { NavLink } from 'react-router-dom';
 
   export default function Home() {
     return (
         <>
-        <Header></Header>
+            <Router>
+                <Header></Header>
 
-        <Container fluid style={{marginTop:'2%'}}>
-            
-            <Row >
-                <Router>
-                    <Col lg={3} md={3}><Sidebar/></Col>
-                    <Col lg={9} md={9}>
-                        <Switch>
-                            <Route path='/Cards'>
-                                <CardView />
-                            </Route>
-                            <Route path='/Alerts'>
-                                <AlertView />
-                            </Route>
-                            <Route path='/Forms'>
-                                <FormView />
-                            </Route>
-                            <Route path='/Dropdowns'>
-                                <DropdownView />
-                            </Route>
-                            <Route path='/Typography'>
-                                <TypographyView />
-                            </Route>
-                            <Route path='/ButtonView'>
-                                <ButtonView />
-                            </Route>
-                            <Route path='/Navbars'>
-                                <NavBarView />
-                            </Route>
-                            <Route path='/Tables'>
-                                <TablesView />
-                            </Route>
-                            <Route path='/Calendar'>
-                                <CalendarView />
-                            </Route>
-                        </Switch>
-                    </Col>
-                    </Router>
-            </Row>
-        </Container>
+                <Container fluid >
+                    
+                    <Row >
+                            <Col lg={12} md={12}>
+                                <Switch>
+                                    <Route path='/Cards'>
+                                        <CardView />
+                                    </Route>
+                                    <Route path='/Alerts'>
+                                        <AlertView />
+                                    </Route>
+                                    <Route path='/Forms'>
+                                        <FormView />
+                                    </Route>
+                                    <Route path='/Dropdowns'>
+                                        <DropdownView />
+                                    </Route>
+                                    <Route path='/Typography'>
+                                        <TypographyView />
+                                    </Route>
+                                    <Route path='/ButtonView'>
+                                        <ButtonView />
+                                    </Route>
+                                    <Route path='/Navbars'>
+                                        <NavBarView />
+                                    </Route>
+                                    <Route path='/Tables'>
+                                        <TablesView />
+                                    </Route>
+                                    <Route path='/Calendar'>
+                                        <CalendarView />
+                                    </Route>
+                                </Switch>
+                            </Col>
+                    </Row>
+                </Container>
+            </Router>
         </>
-        // <>    
-        // <Header></Header>
-        // <Sidebar></Sidebar>
-        // </>
+
     )
 
 }
 
-const Sidebar = ()  => {
-    return (
-        <div style={{marginTop:'7%',position:'fixed',overflowY:'hidden'}}>
-              <CDBSidebar textColor="#fff" backgroundColor="#009B78">
-                <CDBSidebarHeader style={{borderColor:'#FFF'}} prefix={<i className="fa  fa-large"></i>}>
-                        Componentes
-                </CDBSidebarHeader>
-                <CDBSidebarContent  className="sidebar-content">
-                    <CDBSidebarMenu >
-                        <NavLink exact to="/Cards" activeClassName="activeClicked">
-                        <CDBSidebarMenuItem icon='id-card'>Cards</CDBSidebarMenuItem>
-                        </NavLink>
-                        <NavLink exact to="/Alerts" activeClassName="activeClicked">
-                        <CDBSidebarMenuItem icon="exclamation-triangle">Alerts</CDBSidebarMenuItem>
-                        </NavLink>
-                        <NavLink exact to="/Forms" activeClassName="activeClicked">
-                        <CDBSidebarMenuItem icon="keyboard">
-                            Forms
-                        </CDBSidebarMenuItem>
-                        </NavLink>
-                        <NavLink exact to="/Dropdowns" activeClassName="activeClicked">
-                        <CDBSidebarMenuItem icon="caret-down">
-                            Dropdowns
-                        </CDBSidebarMenuItem>
-                        </NavLink>
-                        <NavLink exact to="/Typography" activeClassName="activeClicked">
-                        <CDBSidebarMenuItem icon="heading">
-                            Typography
-                        </CDBSidebarMenuItem>
-                        </NavLink>
-                        <NavLink exact to="/ButtonView" activeClassName="activeClicked">
-                        <CDBSidebarMenuItem icon="stop">
-                            Buttons
-                        </CDBSidebarMenuItem>
-                        </NavLink>
-                        <NavLink exact to="/Navbars" activeClassName="activeClicked">
-                        <CDBSidebarMenuItem icon="bars">
-                            Navbars
-                        </CDBSidebarMenuItem>
-                        </NavLink>
-                        <NavLink exact to="/Tables" activeClassName="activeClicked">
-                        <CDBSidebarMenuItem icon="table">
-                            Tables
-                        </CDBSidebarMenuItem>
-                        </NavLink>
-                        <NavLink exact to="/Calendar" activeClassName="activeClicked">
-                        <CDBSidebarMenuItem icon="calendar-alt">
-                            Calendar
-                        </CDBSidebarMenuItem>
-                        </NavLink>                        
-                    </CDBSidebarMenu>
-                </CDBSidebarContent>
+// const Sidebar = ()  => {
+//     return (
+//         <div style={{marginTop:'7%',position:'fixed',overflowY:'hidden'}}>
+//               <CDBSidebar textColor="#fff" backgroundColor="#009B78">
+//                 <CDBSidebarHeader style={{borderColor:'#FFF'}} prefix={<i className="fa  fa-large"></i>}>
+//                         Componentes
+//                 </CDBSidebarHeader>
+//                 <CDBSidebarContent  className="sidebar-content">
+//                     <CDBSidebarMenu >
+//                         <NavLink exact to="/Cards" activeClassName="activeClicked">
+//                         <CDBSidebarMenuItem icon='id-card'>Cards</CDBSidebarMenuItem>
+//                         </NavLink>
+//                         <NavLink exact to="/Alerts" activeClassName="activeClicked">
+//                         <CDBSidebarMenuItem icon="exclamation-triangle">Alerts</CDBSidebarMenuItem>
+//                         </NavLink>
+//                         <NavLink exact to="/Forms" activeClassName="activeClicked">
+//                         <CDBSidebarMenuItem icon="keyboard">
+//                             Forms
+//                         </CDBSidebarMenuItem>
+//                         </NavLink>
+//                         <NavLink exact to="/Dropdowns" activeClassName="activeClicked">
+//                         <CDBSidebarMenuItem icon="caret-down">
+//                             Dropdowns
+//                         </CDBSidebarMenuItem>
+//                         </NavLink>
+//                         <NavLink exact to="/Typography" activeClassName="activeClicked">
+//                         <CDBSidebarMenuItem icon="heading">
+//                             Typography
+//                         </CDBSidebarMenuItem>
+//                         </NavLink>
+//                         <NavLink exact to="/ButtonView" activeClassName="activeClicked">
+//                         <CDBSidebarMenuItem icon="stop">
+//                             Buttons
+//                         </CDBSidebarMenuItem>
+//                         </NavLink>
+//                         <NavLink exact to="/Navbars" activeClassName="activeClicked">
+//                         <CDBSidebarMenuItem icon="bars">
+//                             Navbars
+//                         </CDBSidebarMenuItem>
+//                         </NavLink>
+//                         <NavLink exact to="/Tables" activeClassName="activeClicked">
+//                         <CDBSidebarMenuItem icon="table">
+//                             Tables
+//                         </CDBSidebarMenuItem>
+//                         </NavLink>
+//                         <NavLink exact to="/Calendar" activeClassName="activeClicked">
+//                         <CDBSidebarMenuItem icon="calendar-alt">
+//                             Calendar
+//                         </CDBSidebarMenuItem>
+//                         </NavLink>                        
+//                     </CDBSidebarMenu>
+//                 </CDBSidebarContent>
                 
-              </CDBSidebar>
+//               </CDBSidebar>
               
 
-        </div>)
-}
+//         </div>)
+// }

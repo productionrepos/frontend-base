@@ -1,6 +1,7 @@
 import React,{ useState } from 'react'
-import { Button, Modal } from 'react-bootstrap'
+import { Modal } from 'react-bootstrap'
 import BlackButton from '../Buttons/ButtonComponents/FilledButtons/BlackButton'
+import WhiteButton from '../Buttons/ButtonComponents/FilledButtons/WhiteButton'
 import './modal.css'
 
 export default function BlackAlert({header,body,label}) {
@@ -11,16 +12,21 @@ export default function BlackAlert({header,body,label}) {
     function handleModal(){
         setOpen(!open)
     }
+    const styles = {
+        color: '#FFF',
+        border: '3px solid #FFFFFF',
+        borderRadius: '2px'
+    }
     return (
         
         <div>
-            <BlackButton onClickProp={handleModal} text='Clickeame'/>
-            <Modal show={open} onHide={()=>handleModal}>
-                <div style={{background:'radial-gradient(70% 70% at 50% 50%, #2C2C2C 0%, #2D403B 100%)'}}>
-                <Modal.Header bsPrefix='modal-header' style={{color:'#FFF'}} > { header || 'Correo no valido'} </Modal.Header>
-                <Modal.Body bsPrefix='modal-body' style={{color:'#FFF'}}> { body ||  'Debe ingresar con una cuenta de Spread'} </Modal.Body>
-                <Modal.Footer bsPrefix='modal-footer' >
-                    <Button variant='modal' style={{borderStyle:'none'}} onClick={handleModal}>{ label || 'Entiendo'}</Button>
+            <BlackButton onClickProp={handleModal}  text='Clickeame'/>
+            <Modal className="modalito" show={open} centered aria-labelledby="contained-modal-title-vcenter" >
+                <div style={{background:'rgba(39, 39, 38, 0.46)', boxShadow: '2px 2px 10px rgba(0, 0, 0, 0.25)', borderRadius: '5px 5px 0px 0px'}}>
+                <Modal.Header bsPrefix='modal-header' style={{ backgroundColor:'#272726', color:'#FFF',borderRadius: '5px 5px 0px 0px'}} > { header || 'Correo no valido'} </Modal.Header>
+                <Modal.Body bsPrefix='modal-body' style={{ color:'#FFF'}}> { body || 'Para hacer uso de la plataforma Debe ingresar con un correo de SPREAD'} </Modal.Body>
+                <Modal.Footer bsPrefix='modal-footer' style={{paddingLeft:'25%'}} >
+                    <WhiteButton myStyle= { styles } onClickProp={handleModal} text='Entiendo'/>
                 </Modal.Footer>
                 </div>
             </Modal>           

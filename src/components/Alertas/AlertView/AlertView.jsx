@@ -9,7 +9,7 @@ export default function AlertView() {
 
     
     return (
-        <Container fluid style={{marginTop:'9.5%'}}>
+        <Container fluid style={{marginTop:'9.5%',marginLeft:'17%'}}>
             <Row>
                 <Col>
                     <GreenAlert/>

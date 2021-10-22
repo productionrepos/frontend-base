@@ -5,6 +5,7 @@ import GreenNavbar from '../NavBarComponents/GreenNavbar'
 
 import {Container} from 'react-bootstrap'
 
+
 export default function NavBarView() {
     // let lista = [
     //     {

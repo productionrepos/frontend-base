@@ -72,13 +72,13 @@ export default function ButtonView() {
                 <Col>
                     <BlackButton/>
                 </Col>
+                <Col>
+                    <RedButton/>                
+                </Col>
 
             </Row>
             <br />
             <Row >
-                <Col>
-                    <RedButton/>                
-                </Col>
                 <Col>
                     <GreenEmptyButton/>
                 </Col>
@@ -89,16 +89,15 @@ export default function ButtonView() {
                     <YellowEmptyButton/>
                 </Col>
 
-
-            </Row>
-            <br />
-            <Row>
                 <Col>
                     <BlackEmptyButton/>    
                 </Col>
                 <Col>
                     <RedEmptyButton/>
                 </Col>
+            </Row>
+            <br />
+            <Row style={{textAlign:'center'}}>
                 <Col>
                     <GreenLinkButton/>
                 </Col>
@@ -108,7 +107,7 @@ export default function ButtonView() {
 
             </Row>
             <br />
-            <Row>
+            <Row style={{textAlign:'center'}}>
                 <Col>
                     <GreenButton2/>    
                 </Col>
@@ -121,20 +120,17 @@ export default function ButtonView() {
     
             </Row>
             <br />
-            <Row>
+            <Row style={{textAlign:'center'}}>
                 <Col>
                     <CheckBox inputs = {lista}/>                
                 </Col>
 
             </Row>
             <br />
-            <Row>
+            <Row style={{textAlign:'center'}}>
                 <Col>
                     <GreenBlockButton/>    
                 </Col>
-            </Row>
-            <br />
-            <Row>
                 <Col>
                     <YellowBlockButton/>    
                 </Col>
