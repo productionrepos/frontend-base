@@ -510,6 +510,7 @@ const DatatablePage = () => {
       small
       data={data}
       theadColor='primary-color'
+      data-test=''
     />
   );
 }

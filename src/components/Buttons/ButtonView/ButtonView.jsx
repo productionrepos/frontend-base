@@ -61,7 +61,7 @@ export default function ButtonView() {
         <Container fluid style={{marginTop:'9.65%',marginBottom:'5%'}}>
             <Row>
                 <Col  >
-                    <GreenButton/>
+                    <GreenButton text='agregar notificacion'/>
                 </Col>
                 <Col>
                     <WhiteButton/>

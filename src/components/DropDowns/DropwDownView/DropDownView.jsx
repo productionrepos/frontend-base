@@ -15,7 +15,9 @@ export default function DropDownView() {
         <Container fluid style={{marginTop:'9.5%'}}>
             <Row>
                 <Col>
+                    <Container fluid style={{backgroundColor:'red',height:'auto'}}>
                     <GreenDropdown/>
+                    </Container>
                 </Col>
                 <Col>
                     <YellowDropdown/>
