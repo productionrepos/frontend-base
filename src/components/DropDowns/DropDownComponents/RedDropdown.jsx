@@ -29,7 +29,7 @@ export default function RedDropdown({items,label}) {
                 { label || 'Danger'}
             </Dropdown.Toggle>
 
-            <Dropdown.Menu style={{width:'100%', backgroundColor:'rgba(234, 67, 53, 0.7)'}}>
+            <Dropdown.Menu className='dropdown-menu-display' style={{width:'100%', backgroundColor:'rgba(234, 67, 53, 0.7)'}}>
                 {
                     items.map( (elemento) => {
                         return (

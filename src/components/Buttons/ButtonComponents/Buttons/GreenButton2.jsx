@@ -1,11 +1,10 @@
 import React from 'react'
 
 import '../TestButton.css'
-
-export default function GreenButton2({onClickProp,text}) {
+import { Button } from 'react-bootstrap'
+ 
+export default function GreenButton2({onClickProp,text,variant,styles}) {
     return (
-        <div className='container-fluid'>
-            <button onClick={onClickProp} type="button" className="btn only-button" style={{color:'#FFFFFF',background:'#009B78'}}>{ text || 'Button'}</button>
-        </div>
+        <Button bsPrefix={variant} style={styles} onClick={onClickProp}> {text || 'Black Button'}</Button>
     )
 }

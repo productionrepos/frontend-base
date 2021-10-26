@@ -29,7 +29,7 @@ export default function BlackDropdown({label,items}) {
                 { label || 'Warning'}
             </Dropdown.Toggle>
 
-            <Dropdown.Menu style={{width:'100%',backgroundColor:'rgba(39, 39, 38, 0.7)'}}>
+            <Dropdown.Menu className='dropdown-menu-display' style={{width:'100%',backgroundColor:'rgba(39, 39, 38, 0.7)'}}>
                 {
                     items.map( (elemento) => {
                         return (

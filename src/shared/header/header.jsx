@@ -4,6 +4,9 @@ import { useDispatch } from 'react-redux'
 import { startLogout } from "../../actions/auth";
 import { NavLink } from 'react-router-dom';
 import '../../components/NavBars/NavBarComponents/Navbar.css'
+
+import LogOutButton from '../../components/Buttons/ButtonComponents/FilledButtons/BlackButton'
+import '../../components/Buttons/ButtonComponents/TestButton.css'
 export const Header = () => {
 
     // const style = {
@@ -43,6 +46,8 @@ export const Header = () => {
     }
 
     const items = [
+    ]
+    const dpItems = [
         {
             href:'/Cards',
             href_label:'Cards'
@@ -66,9 +71,7 @@ export const Header = () => {
         {
             href:'/ButtonView',
             href_label:'Buttons'
-        }
-    ]
-    const dpItems = [
+        },
         {
             href:'/Navbars',
             href_label:'Navbars'
@@ -93,7 +96,7 @@ export const Header = () => {
                 <span className="navbar-toggler-icon"></span>
             </button>
 
-            <div className="collapse navbar-collapse" id="navbarColor02">
+            <div className="collapse navbar-collapse" id="navbarColor02" style={{marginRight:'2%'}}>
                 <ul className="navbar-nav justify-content-end" style={{width:'100%'}}>
                     {
                         items.map((elemento) => {
@@ -120,13 +123,12 @@ export const Header = () => {
                                     )
                                 } )
                             }
-                            <div className="dropdown-divider"></div>
-                            <a onClick={cerrarSesion} className="dropdown-item green-dropdown-item" href="/">Cerrar Sesion</a>
                         </div>
                     </li>
-
                 </ul>
             </div>
+            <LogOutButton onClickProp={cerrarSesion} variant='btn-filled' text='Cerrar Sesion' styles={{backgroundColor:'transparent',borderStyle:'none',boxShadow:'none',color:'white'}}/>
+
             </div>
         </nav>
     )

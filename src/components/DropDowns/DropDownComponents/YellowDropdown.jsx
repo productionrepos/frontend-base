@@ -29,7 +29,7 @@ export default function YellowDropdown({label,items}) {
                 { label || 'Secondary'}
             </Dropdown.Toggle>
 
-            <Dropdown.Menu style={{width:'100%',backgroundColor:'rgba(253, 216, 7, 0.5)'}}>
+            <Dropdown.Menu className='dropdown-menu-display' style={{width:'100%',backgroundColor:'rgba(253, 216, 7, 0.5)'}}>
                 {
                     items.map( (elemento) => {
                         return (

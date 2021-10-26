@@ -2,9 +2,10 @@ import React,{useState} from 'react'
 
 import './inputs.css'
 
-export default function EmailInput({required}) {
+export default function EmailInput({required,returnValue}) {
     const requerido = false || required
     const [email, setemail] = useState('')
+
     function emailValidation(a){
         const regex = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i;
         if(!a || regex.test(a) === false){
@@ -13,9 +14,15 @@ export default function EmailInput({required}) {
         return true;
     }
 
+
     function handleChange(event){
         setemail(event.target.value)
-        //console.log(emailValidation(event.target.value))
+        if( emailValidation(event.target.value) ){
+            console.log('desde email: ',event.target.value  )   
+            returnValue(event.target.value)
+        }
+
+        
     }
 
     return (

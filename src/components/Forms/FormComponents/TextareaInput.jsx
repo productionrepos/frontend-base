@@ -2,7 +2,7 @@ import React,{ useState } from 'react'
 
 import './inputs.css'
 
-export default function TextareaInput({label, required, valid_msg, invalid_msg}) {
+export default function TextareaInput({label, required, valid_msg, invalid_msg,returnValue}) {
     
     const [text, setText] = useState('')
     const requerido = false || required
@@ -16,6 +16,10 @@ export default function TextareaInput({label, required, valid_msg, invalid_msg})
     function handleChange(event){
         // console.log(event.target.value)
         setText(event.target.value)
+        if( inputValidation(event.target.value) ){
+            console.log('desde textArea: ',event.target.value  )   
+            returnValue(event.target.value)
+        }
         //console.log(event.target.value.length)
     }
 

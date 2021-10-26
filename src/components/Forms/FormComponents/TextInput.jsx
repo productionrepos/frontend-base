@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 
 import './inputs.css'
 
-export default function TextInput({label, required, input_type}) {
+export default function TextInput({label, required, input_type,returnValue}) {
     
     const [text, setText] = useState('')
     
@@ -18,7 +18,10 @@ export default function TextInput({label, required, input_type}) {
     function handleChange(event){
         // console.log(event.target.value)
         setText(event.target.value)
-        console.log(event.target.value.length)
+        if( inputValidation(event.target.value) ){
+            console.log('desde text: ',event.target.value  )   
+            returnValue(event.target.value)
+        }
     }
     //console.log(requerido,inputValidation(text))
 

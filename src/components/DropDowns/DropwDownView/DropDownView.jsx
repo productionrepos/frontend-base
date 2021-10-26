@@ -20,7 +20,7 @@ export default function DropDownView() {
                     </Container>
                 </Col>
                 <Col>
-                    <YellowDropdown/>
+                        <YellowDropdown/>
                 </Col>
             </Row>
             <Row style={{marginTop:'20%'}}>

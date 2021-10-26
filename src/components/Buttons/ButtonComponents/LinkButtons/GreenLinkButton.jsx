@@ -2,10 +2,12 @@ import React from 'react'
 
 import '../TestButton.css'
 
-export default function GreenLinkButton({onClickProp,text}) {
+import {Button} from 'react-bootstrap'
+
+
+export default function GreenLinkButton({onClickProp,text,variant,styles}) {
     return (
-        <div className='container-fluid'>
-            <button onClick={onClickProp} type="button" className="btn btn-link disabled button-link-text" style={{color:'#009B78'}}>{ text || 'Link 2'}</button>
-        </div>
+        <Button bsPrefix={variant} style={styles} onClick={onClickProp}> {text || 'Black Button'}</Button>
+
     )
 }

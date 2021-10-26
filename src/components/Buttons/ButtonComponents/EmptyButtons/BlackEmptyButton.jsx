@@ -1,11 +1,10 @@
 import React from 'react'
 
 import '../TestButton.css'
+import { Button } from 'react-bootstrap'
 
-export default function BlackEmptyButton({onClickProp,text}) {
+export default function BlackEmptyButton({onClickProp,text,variant,styles}) {
     return (
-        <div className='container-fluid'>
-            <button onClick={onClickProp} type="button" className="btn button-text" style={{boxShadow:'none', border: '3px solid rgba(39, 39, 38, 0.8)',color:'#272726',background:'#FFFFFF'}}>{ text || 'Warning'}</button>
-        </div>
+        <Button bsPrefix={variant} style={styles} onClick={onClickProp}> {text || 'Black Button'}</Button>
     )
 }

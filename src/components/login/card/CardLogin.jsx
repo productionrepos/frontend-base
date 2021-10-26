@@ -2,19 +2,11 @@ import React, { useState } from 'react';
 import './cardlogin.css'
 import '../../../App.css'
 import title from '../../../assets/title.svg'
-//import {Header} from '../../../shared/header/header'
-// import { startLogout } from "../../../actions/auth";
 import logo from '../../../assets/title.svg'
 import botonGoogle from '../../../assets/boton-google.svg'
 import {firebase, googleAuthProvider} from '../../../firebase/firebase-config'
-//import { useDispatch } from 'react-redux';
-//import { login } from '../../../actions/auth';
-
-
-
-import {Modal,Button} from 'react-bootstrap'
-
-
+import Alerta from '../../Alertas/GreenAlert'
+import '../../Alertas/modal.css'
 
 export const CardLogin = () => {
     
@@ -29,7 +21,6 @@ export const CardLogin = () => {
 
                 if(user.email.includes('@spread.cl')){
                     console.log('valido')
-                    setOpen(false)
                 }
                 else{
                     console.log('invalido')
@@ -42,8 +33,8 @@ export const CardLogin = () => {
     //modal
     const [open,setOpen] = useState(false)
     
-    function handleModal(){
-        setOpen(!open)
+    function handleModal(valor){
+        setOpen(valor)
     }
 
 
@@ -72,21 +63,7 @@ export const CardLogin = () => {
                     <div className="triangulo"></div>
                 </div>               
             </div>
-
-
-            <Modal  show={open}>
-                <div style={{background:'radial-gradient(70% 70% at 50% 50%, #009B78 0%, #357B6B 100%)'}}>
-                <Modal.Header bsPrefix='modal-header' style={{color:'#FFF'}} > Correo no valido </Modal.Header>
-                <Modal.Body bsPrefix='modal-body' style={{color:'#FFF'}}> Debe ingresar con una cuenta de Spread </Modal.Body>
-                <Modal.Footer bsPrefix='modal-footer' >
-                    <Button variant='modal' onClick={handleModal}>Entiendo</Button>
-                </Modal.Footer>
-                </div>
-            </Modal>  
-
-
-
-
+            <Alerta mostrar={open} getOpen={handleModal}/>
         </div>
 
     )
