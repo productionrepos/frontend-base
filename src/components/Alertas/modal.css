@@ -33,10 +33,3 @@ letter-spacing: 0.05em;
     /* border-color: #357B6B !important; */
 }
 
-body.modal-open > :not(.modal) {
-    -webkit-filter: blur(4px);
-    -moz-filter: blur(4px);
-    -o-filter: blur(4px);
-    -ms-filter: blur(4px);
-    filter: blur(4px);
-}
