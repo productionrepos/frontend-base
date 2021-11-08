@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Card9({headerText,titleText,bodyText,href,href_label,CardContainerStyle,bodyStyle,headerStyle,linkStyle}) {
+export default function LinkCard({headerText,titleText,bodyText,href,href_label,CardContainerStyle,bodyStyle,headerStyle,linkStyle}) {
     return (
         <div className='container-fluid'>
                 <div className="card white-text card-container2  mb-3" style={CardContainerStyle}>

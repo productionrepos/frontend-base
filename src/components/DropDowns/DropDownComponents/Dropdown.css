@@ -1,12 +1,5 @@
 
 
-.dropdown-menu-display{
-    position: relative !important;
-    inset: unset !important;
-    transform: unset !important;
-    margin-top: 0px !important;
-}
-
 .dropdown-test{
     font-family: Nunito !important;
     font-style: normal;

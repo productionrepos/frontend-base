@@ -23,3 +23,52 @@
     background: #FFF !important;
     border-style: none;
 }
+
+
+
+.form-check{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0.05em;
+    color: #161613;
+}
+.form-check-input[type="radio"] {
+    border-radius: 50%;
+}
+.form-check-input:checked {
+    background-color: rgba(0, 155, 120, 0.7) !important;
+    border-color: rgba(0, 155, 120, 0.7) !important;
+}
+
+.form-label{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0.05em;
+    color: #161613;
+}
+
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000000;
+    pointer-events: none;
+    background:rgba(0, 155, 120, 0.7);
+    cursor: pointer;
+}
+
+
+.form-select{
+    font-family: Nunito;
+    font-style: normal ;
+    font-weight: normal ;
+    font-size: 14px ;
+    line-height: 19px ;
+    letter-spacing: 0.05em;
+    color: #8B8B8B ;
+}

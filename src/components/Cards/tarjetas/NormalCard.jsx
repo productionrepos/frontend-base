@@ -2,7 +2,7 @@ import React from 'react'
 
 import './tarjeta.css'
 
-export default function Card1({headerText,titleText,bodyText,headerStyle,bodyStyle,CardContainerStyle}) {
+export default function NormalCard({headerText,titleText,bodyText,headerStyle,bodyStyle,CardContainerStyle}) {
     return (
         <div className='container-fluid'>            
                 <div className="card white-text card-container2  mb-3" style={CardContainerStyle}>

@@ -5,41 +5,14 @@ import { startLogout } from "../../actions/auth";
 import { NavLink } from 'react-router-dom';
 import '../../components/NavBars/NavBarComponents/Navbar.css'
 
-import LogOutButton from '../../components/Buttons/ButtonComponents/FilledButtons/BlackButton'
+import LogOutButton from '../../components/Buttons/ButtonComponents/FilledButton'
 import '../../components/Buttons/ButtonComponents/TestButton.css'
+
+import Dropdown1 from '../../components/DropDowns/DropDownComponents/DropDown'
+import '../../components/DropDowns/DropDownComponents/Dropdown.css'
+
 export const Header = () => {
 
-    // const style = {
-    //     with: '100%',
-    //     height: '100px',
-    //     backgroundColor: '#ADFFEC',
-    //     position: 'fixed',
-    //     width: '100%',
-    //     top: '0',
-    //     zIndex:"2"
-        
-    // }
-
-    // const layerOne = {
-    //     with: '100%',
-    //     height: '90px',
-    //     backgroundColor: '#00CC9C'
-    // }
-    // const layerTwo = {
-    //     with: '100%',
-    //     height: '80px',
-    //     backgroundColor: '#009B78',
-    //     color: 'white'
-    // }
-
-    // const contentTitleSpread = {
-    //     display: 'flex',
-    //     alignItems: 'center',
-    //     color: 'white',
-    //     justifyContent: 'space-between',
-    //     paddingRight: '10px',
-    //     height: '100%',
-    // }
     const dispatch = useDispatch();
     const cerrarSesion = () => {
         dispatch( startLogout() );
@@ -54,7 +27,7 @@ export const Header = () => {
         },
         {
             href:'/Alerts',
-            href_label:'Alerts'
+            href_label:'Alerts \xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0'
         },
         {
             href:'/Forms',
@@ -90,7 +63,7 @@ export const Header = () => {
         <nav style={{ background: 'linear-gradient(180deg, #009B78 0%, #357B6B 100%)'}} className="navbar navbar-expand-lg navbar-dark">
             <div className="container-fluid">
             <a className="navbar-brand name" href='/Home'>
-                <img src={title} alt="img-title" style={{ height: '40px' }} />
+                <img src={title} alt="img-title" style={{ height: '40px',paddingLeft:'40%' }} />
             </a>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
@@ -101,33 +74,17 @@ export const Header = () => {
                     {
                         items.map((elemento) => {
                             return (
-                                // <li key={elemento.href_label} className="nav-item">
-                                //     <a className="nav-link links" href={elemento.href}>{elemento.href_label}<span className="visually-hidden">(current)</span>
-                                //     </a>
-                                // </li>
+
                                 <NavLink key={elemento.href_label} className="nav-link links" exact to={elemento.href} activeClassName="activeClicked">
                                     {elemento.href_label}
                                 </NavLink>
                             )
                         })
                     }    
-                    <li className="nav-item dropdown ">
-                        <a className="nav-link dropdown-toggle links" data-bs-toggle="dropdown" href="/" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                        <div className="dropdown-menu green-dropdown-menu">
-                            {
-                                dpItems.map( (elemento) => {
-                                    return(
-                                        <NavLink key={elemento.href_label} className="dropdown-item green-dropdown-item" exact to={elemento.href} activeClassName="activeClicked">
-                                            {elemento.href_label}
-                                        </NavLink>
-                                    )
-                                } )
-                            }
-                        </div>
-                    </li>
+                    <Dropdown1 label='Components' ToggleStyle={{backgroundColor:'transparent', borderStyle:'none'}} MenuStyle={{background: 'linear-gradient(180deg, #009B78 0%, #357B6B 100%)'}} actions={dpItems}/>
                 </ul>
             </div>
-            <LogOutButton onClickProp={cerrarSesion} variant='btn-filled' text='Cerrar Sesion' styles={{backgroundColor:'transparent',borderStyle:'none',boxShadow:'none',color:'white'}}/>
+            <LogOutButton onClickProp={cerrarSesion} variant='btn-filled' text='Cerrar Sesión' styles={{backgroundColor:'transparent',borderStyle:'none',boxShadow:'none',color:'white'}}/>
 
             </div>
         </nav>

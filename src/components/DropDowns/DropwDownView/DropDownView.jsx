@@ -1,9 +1,10 @@
 import React from 'react'
-import BlackDropdown from '../DropDownComponents/BlackDropdown'
 
+import BlackDropdown from '../DropDownComponents/BlackDropdown'
 import GreenDropdown from '../DropDownComponents/GreenDropdown'
 import RedDropdown from '../DropDownComponents/RedDropdown'
 import YellowDropdown from '../DropDownComponents/YellowDropdown'
+// import DropDown from '../DropDownComponents/DropDown'
 
 import { Container,Row,Col } from 'react-bootstrap'
 
@@ -15,12 +16,12 @@ export default function DropDownView() {
         <Container fluid style={{marginTop:'9.5%'}}>
             <Row>
                 <Col>
-                    <Container fluid style={{backgroundColor:'red',height:'auto'}}>
+                    <Container fluid>
                     <GreenDropdown/>
                     </Container>
                 </Col>
                 <Col>
-                        <YellowDropdown/>
+                    <YellowDropdown/>
                 </Col>
             </Row>
             <Row style={{marginTop:'20%'}}>
@@ -30,6 +31,9 @@ export default function DropDownView() {
                 <Col>
                     <RedDropdown/>
                 </Col>
+                {/* <Col>
+                    <DropDown label='navlink dropdown'/>
+                </Col> */}
             </Row>
             
      

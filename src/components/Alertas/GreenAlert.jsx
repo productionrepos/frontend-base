@@ -1,7 +1,7 @@
 import React,{ useState } from 'react'
 import {  Modal } from 'react-bootstrap'
 import './modal.css'
-import Button from '../Buttons/ButtonComponents/FilledButtons/BlackButton'
+import Button from '../Buttons/ButtonComponents/FilledButton'
 export default function GreenAlert({header,body,mostrar,getOpen}) {
     const [open, setOpen] = useState(false)
 

@@ -12089,6 +12089,14 @@ react-bootstrap-range-slider@^1.2.1:
     classnames "^2.2.6"
     prop-types "^15.7.2"
 
+react-bootstrap-range-slider@^3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/react-bootstrap-range-slider/-/react-bootstrap-range-slider-3.0.3.tgz#6b99a2fac775030814d30fb9003e5ce88db95137"
+  integrity sha512-D2L0yDltDQCC0Yq40vHgVL2hHYVa+cLHv2OqgzuFUEB/IdqzHbz22yGjuj5jS12VIRB1CX+KxzeH+7nBojg+Sg==
+  dependencies:
+    classnames "^2.3.1"
+    prop-types "^15.7.2"
+
 react-bootstrap-table2-paginator@^2.1.2:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/react-bootstrap-table2-paginator/-/react-bootstrap-table2-paginator-2.1.2.tgz#a62151909e594719db568cede6e5d2962cbf8ddb"
@@ -14151,6 +14159,11 @@ svgo@^1.0.0, svgo@^1.2.2:
     stable "^0.1.8"
     unquote "~1.1.1"
     util.promisify "~1.0.0"
+
+sweetalert2@^11.1.9:
+  version "11.1.9"
+  resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-11.1.9.tgz#f3948198119fab2de7014ccd7840cc4a6d671185"
+  integrity sha512-ox+BjtAbO8mJrbQH9TsNwMwLeTfV+ve33CVz/kKn5D/DhRiSqnw2rWL4HuBlh9Z4yqYlTD5viR5Z2K5D3avM7Q==
 
 symbol-observable@1.2.0, symbol-observable@^1.0.4, symbol-observable@^1.1.0:
   version "1.2.0"

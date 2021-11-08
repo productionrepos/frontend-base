@@ -147,3 +147,16 @@
   border-radius: 5px;
   padding: 5% 10%;
 }
+
+.btn-button2{
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px ;
+  line-height: 33px ;
+  letter-spacing: 0.05em ;
+  padding-left: 2%;
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
+  padding-right: 2%;
+}

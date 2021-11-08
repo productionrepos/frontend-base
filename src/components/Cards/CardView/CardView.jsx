@@ -1,18 +1,9 @@
 import React from 'react'
 import './CardView.css'
 
-//import {Header} from '../../../shared/header/header'
+import NormalCard from '../tarjetas/NormalCard'
 
-import Card1 from '../tarjetas/Card1'
-// import Card2 from '../tarjetas/Card2'
-// import Card3 from '../tarjetas/Card3'
-// import Card4 from '../tarjetas/Card4'
-// import Card5 from '../tarjetas/Card5'
-// import Card6 from '../tarjetas/Card6'
-// import Card7 from '../tarjetas/Card7'
-// import Card8 from '../tarjetas/Card8'
-import Card9 from '../tarjetas/Card9'
-// import Card10 from '../tarjetas/Card10'
+import LinkCard from '../tarjetas/LinkCard'
 
 import { Row,Col,Container } from 'react-bootstrap'
 
@@ -158,22 +149,22 @@ export default function Cards() {
     return (
         <Container style={{marginTop:'9.65%'}}>
             <Row>
-                <Col><Card1 headerText='Card1' titleText='Primary Card1 Title' CardContainerStyle={card_container_style} bodyText={body_text} bodyStyle={body_style} headerStyle={header_style}/></Col>
-                <Col><Card1 headerText='Card2' titleText='Primary Card2 Title' CardContainerStyle={card_container_style2} bodyStyle={body_style2} headerStyle={header_style2}/></Col>
-                <Col><Card1 headerText='Card3' titleText='Primary Card3 Title' CardContainerStyle={card_container_style3} bodyText={body_text} bodyStyle={body_style3} headerStyle={header_style3}/></Col>
-                <Col><Card1 headerText='Card4' titleText='Primary Card4 Title' CardContainerStyle={card_container_style4} bodyStyle={body_style4} headerStyle={header_style4}/></Col>
+                <Col><NormalCard headerText='Card1' titleText='Primary Card1 Title' CardContainerStyle={card_container_style} bodyText={body_text} bodyStyle={body_style} headerStyle={header_style}/></Col>
+                <Col><NormalCard headerText='Card2' titleText='Primary Card2 Title' CardContainerStyle={card_container_style2} bodyStyle={body_style2} headerStyle={header_style2}/></Col>
+                <Col><NormalCard headerText='Card3' titleText='Primary Card3 Title' CardContainerStyle={card_container_style3} bodyText={body_text} bodyStyle={body_style3} headerStyle={header_style3}/></Col>
+                <Col><NormalCard headerText='Card4' titleText='Primary Card4 Title' CardContainerStyle={card_container_style4} bodyStyle={body_style4} headerStyle={header_style4}/></Col>
             </Row>
 
             <Row>
-                <Col><Card1 headerText='Card5' titleText='Primary Card5 Title' CardContainerStyle={card_container_style5} bodyText={body_text} bodyStyle={body_style5} headerStyle={header_style5}/></Col>
-                <Col><Card1 headerText='Card6' titleText='Primary Card6 Title' CardContainerStyle={card_container_style6} bodyStyle={body_style6} headerStyle={header_style6}/></Col>
-                <Col><Card1 headerText='Card7' titleText='Primary Card7 Title' CardContainerStyle={card_container_style7} bodyText={body_text} bodyStyle={body_style7} headerStyle={header_style7}/></Col>
-                <Col><Card1 headerText='Card8' titleText='Primary Card8 Title' CardContainerStyle={card_container_style8} bodyStyle={body_style8} headerStyle={header_style8}/></Col>
+                <Col><NormalCard headerText='Card5' titleText='Primary Card5 Title' CardContainerStyle={card_container_style5} bodyText={body_text} bodyStyle={body_style5} headerStyle={header_style5}/></Col>
+                <Col><NormalCard headerText='Card6' titleText='Primary Card6 Title' CardContainerStyle={card_container_style6} bodyStyle={body_style6} headerStyle={header_style6}/></Col>
+                <Col><NormalCard headerText='Card7' titleText='Primary Card7 Title' CardContainerStyle={card_container_style7} bodyText={body_text} bodyStyle={body_style7} headerStyle={header_style7}/></Col>
+                <Col><NormalCard headerText='Card8' titleText='Primary Card8 Title' CardContainerStyle={card_container_style8} bodyStyle={body_style8} headerStyle={header_style8}/></Col>
 
             </Row>
             <Row>
-                <Col><Card9 headerText='Card9' titleText='Primary Card9 Title' CardContainerStyle={card_container_style9} bodyStyle={body_style9} headerStyle={header_style9} linkStyle={card_link_style9}/></Col>
-                <Col><Card9 headerText='Card10' titleText='Primary Card10 Title' href='/linkb' href_label='Link B' CardContainerStyle={card_container_style10} bodyStyle={body_style10} headerStyle={header_style10} linkStyle={card_link_style10}/></Col>
+                <Col><LinkCard headerText='Card9' titleText='Primary Card9 Title' CardContainerStyle={card_container_style9} bodyStyle={body_style9} headerStyle={header_style9} linkStyle={card_link_style9}/></Col>
+                <Col><LinkCard headerText='Card10' titleText='Primary Card10 Title' href='/linkb' href_label='Link B' CardContainerStyle={card_container_style10} bodyStyle={body_style10} headerStyle={header_style10} linkStyle={card_link_style10}/></Col>
 
             </Row>
         </Container>

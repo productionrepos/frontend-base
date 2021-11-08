@@ -1,9 +1,10 @@
 import React from 'react'
 import {Dropdown} from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './DropDown.css'
+import './Dropdown.css'
+import { NavLink } from 'react-router-dom';
 
-export default function DropDown({text,actions}) {
+export default function DropDown({label,actions,ToggleStyle, MenuStyle}) {
   let lista = []
   if ( actions && actions.length > 0 ){
     console.log(actions)
@@ -11,22 +12,23 @@ export default function DropDown({text,actions}) {
   }
   else{
     lista = [
-      {url:'#/action-1',url_text:'Action-1'},
-      {url:'#/action-2',url_text:'Action-2'},
-      {url:'#/action-3',url_text:'Action-3'},
-      {url:'#/action-4',url_text:'Action-4'}
+      {href:'#/action-1',href_label:'Action-1'},
+      {href:'#/action-2',href_label:'Action-2'},
+      {href:'#/action-3',href_label:'Action-3'},
+      {href:'#/action-4',href_label:'Action-4'}
     ]
   }
     return (
-        <Dropdown  className='drop' >
-        <Dropdown.Toggle style={{background:'#009B78', borderStyle:'none'}} className='drop-toggle'>
-          {text || 'Dropdown'}
+        <Dropdown >
+        <Dropdown.Toggle style={ ToggleStyle || {background:'#009B78', borderStyle:'none'}} className='dropdown-label'>
+          {label || 'Dropdown'}
         </Dropdown.Toggle>
 
-        <Dropdown.Menu>
+        <Dropdown.Menu  className='dropdown-menu-display' style={ MenuStyle || {backgroundColor:'rgba(0, 155, 120, 0.7)'}}>
           {lista.map( data  => (
-            <Dropdown.Item key={data.url} href={data.url}>{data.url_text}</Dropdown.Item>
-
+            <NavLink key={data.href_label} className="nav-link links" exact to={data.href} activeClassName="activeClicked" >
+              <Dropdown.Item id='green-d-item'key={data.href} href={data.href}>{data.href_label}</Dropdown.Item>
+            </NavLink>
           ))}
 
      
