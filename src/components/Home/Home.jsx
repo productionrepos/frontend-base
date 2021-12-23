@@ -13,11 +13,11 @@ import TablesView from '../Tables/TablesView/Tablesview'
 import CalendarView from '../Calendar/Calendarview'
 import { Container, Row, Col } from 'react-bootstrap'
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-  // Link
-} from 'react-router-dom'
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    //Link
+  } from "react-router-dom";
 //   import {
 //     CDBSidebar,
 //     CDBSidebarContent,
@@ -28,50 +28,53 @@ import {
 //   } from 'cdbreact';
 //   import { NavLink } from 'react-router-dom';
 
-export default function Home() {
-  return (
-    <>
-      <Router>
-        <Header></Header>
+  export default function Home() {
+    return (
+        <>
+            <Router>
+                <Header></Header>
 
-        <Container fluid>
-          <Row>
-            <Col lg={12} md={12}>
-              <Switch>
-                <Route path="/Cards">
-                  <CardView />
-                </Route>
-                <Route path="/Alerts">
-                  <AlertView />
-                </Route>
-                <Route path="/Forms">
-                  <FormView />
-                </Route>
-                <Route path="/Dropdowns">
-                  <DropdownView />
-                </Route>
-                <Route path="/Typography">
-                  <TypographyView />
-                </Route>
-                <Route path="/ButtonView">
-                  <ButtonView />
-                </Route>
-                <Route path="/Navbars">
-                  <NavBarView />
-                </Route>
-                <Route path="/Tables">
-                  <TablesView />
-                </Route>
-                <Route path="/Calendar">
-                  <CalendarView />
-                </Route>
-              </Switch>
-            </Col>
-          </Row>
-        </Container>
-      </Router>
-    </>
-  )
+                <Container fluid >
+                    
+                    <Row >
+                            <Col lg={12} md={12}>
+                                <Switch>
+                                    <Route path='/Cards'>
+                                        <CardView />
+                                    </Route>
+                                    <Route path='/Alerts'>
+                                        <AlertView />
+                                    </Route>
+                                    <Route path='/Forms'>
+                                        <FormView />
+                                    </Route>
+                                    <Route path='/Dropdowns'>
+                                        <DropdownView />
+                                    </Route>
+                                    <Route path='/Typography'>
+                                        <TypographyView />
+                                    </Route>
+                                    <Route path='/ButtonView'>
+                                        <ButtonView />
+                                    </Route>
+                                    <Route path='/Navbars'>
+                                        <NavBarView />
+                                    </Route>
+                                    <Route path='/Tables'>
+                                        <TablesView />
+                                    </Route>
+                                    <Route path='/Calendar'>
+                                        <CalendarView />
+                                    </Route>
+                                </Switch>
+                            </Col>
+                    </Row>
+                </Container>
+            </Router>
+        </>
+
+    )
+
 }
 
 // const Sidebar = ()  => {
@@ -123,11 +126,12 @@ export default function Home() {
 //                         <CDBSidebarMenuItem icon="calendar-alt">
 //                             Calendar
 //                         </CDBSidebarMenuItem>
-//                         </NavLink>
+//                         </NavLink>                        
 //                     </CDBSidebarMenu>
 //                 </CDBSidebarContent>
-
+                
 //               </CDBSidebar>
+              
 
 //         </div>)
 // }
