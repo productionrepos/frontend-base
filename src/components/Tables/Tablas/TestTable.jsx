@@ -1,7 +1,6 @@
-import React from 'react';
-import { MDBDataTable } from 'mdbreact';
+import React from 'react'
+import { MDBDataTable } from 'mdbreact'
 import './mdb.css'
-
 
 const DatatablePage = () => {
   const data = {
@@ -501,7 +500,7 @@ const DatatablePage = () => {
         salary: '$112'
       }
     ]
-  };
+  }
 
   return (
     <MDBDataTable
@@ -509,10 +508,10 @@ const DatatablePage = () => {
       bordered
       small
       data={data}
-      theadColor='primary-color'
-      data-test=''
+      theadColor="primary-color"
+      data-test=""
     />
-  );
+  )
 }
 
-export default DatatablePage;
+export default DatatablePage
